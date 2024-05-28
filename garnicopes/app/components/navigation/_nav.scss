@@ -1,0 +1,36 @@
+.nav_body {
+  background-color: #FFFFFF0D;
+  padding: 25px 0px;
+  // font-family: "Poppins", sans-serif;
+  font-family: gilroyBold;
+}
+.nav {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+
+  &__container {
+  }
+  &__nav_link {
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: 300;
+    letter-spacing: 0.07em;
+    color: rgba(255, 255, 255, 0.466);
+    transition: 0.5s;
+    text-align: center;
+    &:hover {
+      color: rgba(255, 255, 255, 0.89);
+    }
+    &.active {
+      color: white;
+    }
+  }
+}
+
+
+.mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

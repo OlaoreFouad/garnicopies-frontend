@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: gilroyLight;
+  src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyRegular;
+  src: url("/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyMedium;
+  src: url("/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+.nav_body {
+  background-color: rgba(255, 255, 255, 0.0509803922);
+  padding: 25px 0px;
+  font-family: gilroyBold;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__nav_link {
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  color: rgba(255, 255, 255, 0.466);
+  transition: 0.5s;
+  text-align: center;
+}
+.nav__nav_link:hover {
+  color: rgba(255, 255, 255, 0.89);
+}
+.nav__nav_link.active {
+  color: white;
+}
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  width: 99%;
+  margin: auto;
+}/*# sourceMappingURL=styles.css.map */
