@@ -1,0 +1,100 @@
+@import "../styles/base";
+
+.header {
+  text-align: center;
+  padding: 7em 0px;
+  position: relative;
+
+  .bgImg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+  }
+
+  .scrollImg {
+    margin:  auto;
+    margin-top: 11em;
+  }
+  &__tag {
+    font-family: gilroyRegular;
+    font-size: 1.2em;
+    color: #ffffff;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.1em;
+    }
+    @media screen and (max-width: 310px) {
+      font-size: 0.9em;
+    }
+  }
+  &__heading {
+    font-family: gilroyBold;
+    font-size: 4em;
+    margin: 20px auto;
+    width: 90%;
+
+    line-height: 1.1em;
+    @media screen and (min-width: 999px) {
+      font-size: 5em;
+    }
+
+    @media screen and (max-width: 570px) {
+      font-size: 3.5em;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 3em;
+    }
+    @media screen and (max-width: 280px) {
+      font-size: 2em;
+    }
+    span {
+      color: $green;
+    }
+  }
+}
+
+.button__container {
+  margin: 40px auto;
+  width: fit-content;
+  padding: 15px 0px;
+  position: relative;
+  transition: 0.5s;
+  border: 1px solid $green;
+
+  &::before {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    content: "";
+    top: 0%;
+    left: 0px;
+    background: $green;
+    transition: 0.4s;
+    z-index: -10;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  .button {
+    padding: 15px 60px;
+    z-index: 10;
+    position: relative;
+    font-family: gilroyBold;
+    font-weight: 400;
+    color: $green;
+    transition: 0.3s;
+  }
+
+  &:hover .button {
+    color: white;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 2px 40px rgba($green, 0.8);
+  }
+}

@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: gilroyLight;
+  src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyRegular;
+  src: url("/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyMedium;
+  src: url("/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyLight;
+  src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyRegular;
+  src: url("/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyMedium;
+  src: url("/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+.nav_body {
+  background-color: rgba(255, 255, 255, 0.0509803922);
+  padding: 25px 0px;
+  font-family: gilroyBold;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__nav_link {
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  color: rgba(255, 255, 255, 0.466);
+  transition: 0.5s;
+  text-align: center;
+}
+.nav__nav_link:hover {
+  color: rgba(255, 255, 255, 0.89);
+}
+.nav__nav_link.active {
+  color: white;
+}
+
+.mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.mobile .sidenav {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #0D0D0D;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.mobile .sidenav__links {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mobile .sidenav__links .top_section {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  width: calc(100% - 60px);
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile .sidenav__links .nav__nav_link {
+  text-align: start;
+  font-size: 3.4em;
+  margin: 0px;
+}
+@media screen and (max-width: 400px) {
+  .mobile .sidenav__links .nav__nav_link {
+    font-size: 2.5em;
+  }
+}
+
+@font-face {
+  font-family: gilroyLight;
+  src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyRegular;
+  src: url("/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyMedium;
+  src: url("/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+.header {
+  text-align: center;
+  padding: 7em 0px;
+  position: relative;
+}
+.header .bgImg {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
+.header .scrollImg {
+  margin: auto;
+  margin-top: 11em;
+}
+.header__tag {
+  font-family: gilroyRegular;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+@media screen and (max-width: 600px) {
+  .header__tag {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 310px) {
+  .header__tag {
+    font-size: 0.9em;
+  }
+}
+.header__heading {
+  font-family: gilroyBold;
+  font-size: 4em;
+  margin: 20px auto;
+  width: 90%;
+  line-height: 1.1em;
+}
+@media screen and (min-width: 999px) {
+  .header__heading {
+    font-size: 5em;
+  }
+}
+@media screen and (max-width: 570px) {
+  .header__heading {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 380px) {
+  .header__heading {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 280px) {
+  .header__heading {
+    font-size: 2em;
+  }
+}
+.header__heading span {
+  color: #1FC24D;
+}
+
+.button__container {
+  margin: 40px auto;
+  width: fit-content;
+  padding: 15px 0px;
+  position: relative;
+  transition: 0.5s;
+  border: 1px solid #1FC24D;
+}
+.button__container::before {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  content: "";
+  top: 0%;
+  left: 0px;
+  background: #1FC24D;
+  transition: 0.4s;
+  z-index: -10;
+}
+.button__container:hover::before {
+  width: 100%;
+}
+.button__container .button {
+  padding: 15px 60px;
+  z-index: 10;
+  position: relative;
+  font-family: gilroyBold;
+  font-weight: 400;
+  color: #1FC24D;
+  transition: 0.3s;
+}
+.button__container:hover .button {
+  color: white;
+}
+.button__container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 2px 40px rgba(31, 194, 77, 0.8);
+}
+
+.container {
+  max-width: 1400px;
+  width: 99%;
+  margin: auto;
+}/*# sourceMappingURL=styles.css.map */
