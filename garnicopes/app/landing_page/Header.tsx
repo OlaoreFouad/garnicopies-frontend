@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-function Header() {
+export function Header() {
   const handleClick = () => {};
   return (
     <>
@@ -16,7 +16,7 @@ function Header() {
         priority
       />
       <p className="header__tag">A copywriting agency that just fits.</p>
-      <h1 className="header__heading">
+      <h1 className="header__heading">  
         Organic <span>Content</span>, Organic <span>Conversions</span>
       </h1>
       <div className="button__container">
@@ -42,5 +42,3 @@ function Header() {
     </>
   );
 }
-
-export default Header;

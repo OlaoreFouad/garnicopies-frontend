@@ -1,10 +1,11 @@
 import Image from "next/image";
-import Header from "./landing_page/Header";
+import * as Landing from "./landing_page";
 
 export default function Home() {
   return (
     <div className="container header">
-      <Header />
+      <Landing.Header />
+      <Landing.Services />
     </div>
   );
 }
