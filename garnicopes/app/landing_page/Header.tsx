@@ -16,12 +16,12 @@ export function Header() {
         priority
       />
       <p className="header__tag">A copywriting agency that just fits.</p>
-      <h1 className="header__heading">  
+      <h1 className="header__heading">
         Organic <span>Content</span>, Organic <span>Conversions</span>
       </h1>
       <div className="button__container">
         <Link href={"/"} className="button">
-          Let's Talk
+          Let&apos;s Talk
         </Link>
       </div>
 

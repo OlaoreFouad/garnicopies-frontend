@@ -32,7 +32,7 @@ export function Services() {
   return (
     <div className="services">
       <p className=" section__tag">Services</p>
-      <h1 className="services__heading">
+      <h2 className="services__heading">
         COPIES WITH A <span>F</span>
         <span>E</span>
         <span>E</span>
@@ -41,10 +41,10 @@ export function Services() {
         <span>N</span>
         <span>G</span>
         <span>!</span>
-      </h1>
+      </h2>
       <p className="section__tag services__info">
-        There's no second chances. Bad writing will send customers straight to
-        your competitor. Never to return.{" "}
+        There&apos;s no second chances. Bad writing will send customers straight
+        to your competitor. Never to return.{" "}
         <span>Copy that connects and converts is not just a dream.</span> We can
         make it your reality.
       </p>

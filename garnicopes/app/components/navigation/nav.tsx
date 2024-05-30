@@ -30,6 +30,10 @@ interface NavProp {
 /**This section is for when the web application is on desktop View */
 const DesktopNav = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen((isOpen) => !isOpen);
+  };
 
   return (
     <div className="container nav">
@@ -43,7 +47,7 @@ const DesktopNav = () => {
           priority
         />
       </Link>
-      <div className="nav__container">
+      <div className="nav__container nav__resp">
         {paths.map((path) => (
           <Link
             key={path.pathname}
@@ -58,32 +62,7 @@ const DesktopNav = () => {
           </Link>
         ))}
       </div>
-    </div>
-  );
-};
-
-/**This section is for when the web application is on mobile View */
-
-const MobileNav = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsOpen((isOpen) => !isOpen);
-  };
-  return (
-    <div className="container mobile">
-      <Link href={"/"}>
-        <Image
-          src="/logo.png"
-          alt="Vercel Logo"
-          style={{ zIndex: 33 }}
-          // className="dark:invert"
-          width={150}
-          height={34}
-          priority
-        />
-      </Link>
-
-      <div className="action" onClick={handleClick}>
+      <div className="action__button" onClick={handleClick}>
         <Image
           src="/hamburger.png"
           alt="Vercel Logo"
@@ -94,12 +73,16 @@ const MobileNav = () => {
         />
       </div>
 
+      {/* <div className="mobile"> */}
       <AnimatePresence>
         {isOpen && <SideNav isOpen={isOpen} setIsOpen={setIsOpen} />}
       </AnimatePresence>
+      {/* </div> */}
     </div>
   );
 };
+
+/**This section is for when the web application is on mobile View */
 
 const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
   const pathname = usePathname();
@@ -153,7 +136,6 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
               src="/logo.png"
               alt="Vercel Logo"
               style={{ zIndex: 33 }}
-              // className="dark:invert"
               width={150}
               height={34}
               priority
@@ -197,25 +179,8 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
 };
 
 const Nav = () => {
-  const [isMobile, setIsMobile] = useState(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  if (isMobile === null) {
-    return null; // or a loading spinner, if you prefer
-  }
-
   return (
-    <div className="nav_body">{isMobile ? <MobileNav /> : <DesktopNav />}</div>
+    <div className="nav_body">{<DesktopNav />}</div>
   );
 };
 
