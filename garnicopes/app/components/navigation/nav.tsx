@@ -39,7 +39,7 @@ const DesktopNav = () => {
           alt="Vercel Logo"
           // className="dark:invert"
           width={150}
-          height={34}
+          height={30}
           priority
         />
       </Link>
@@ -89,7 +89,7 @@ const MobileNav = () => {
           alt="Vercel Logo"
           // className="dark:invert"
           width={34}
-          height={34}
+          height={25}
           priority
         />
       </div>

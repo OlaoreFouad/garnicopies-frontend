@@ -1,4 +1,32 @@
 import React from "react";
+import Image from "next/image";
+
+interface Service {
+  heading: string;
+  details: string;
+}
+const services: Service[] = [
+  {
+    heading: "WEB COPY",
+    details:
+      "Get engaging copy that’s also fully optimised for search engines. With your brand personality stamped across every page.",
+  },
+  {
+    heading: "CASE STUDY",
+    details:
+      "Use real-life examples to showcase your products and services. The best stories come from your customers.",
+  },
+  {
+    heading: "PRODUCT DESCRIPTIONS",
+    details:
+      "A chance to sprinkle personality where your customers don’t expect it. And guide them seamlessly to the ‘buy now’ button.",
+  },
+  {
+    heading: "EMAIL MARKETING",
+    details:
+      "Get engaging copy that’s also fully optimised for search engines. With your brand personality stamped across every page.",
+  },
+];
 
 export function Services() {
   return (
@@ -21,8 +49,17 @@ export function Services() {
         make it your reality.
       </p>
 
-      <div className="services__service">
-        <div></div>
+      <div className="services__container">
+        {services.map((element, index) => {
+          return (
+            <div key={index} className="services__service">
+              <div className="info">
+                <h3 className="heading">{element.heading}</h3>
+                <p className="info__details">{element.details}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
