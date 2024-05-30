@@ -6,6 +6,7 @@ export default function Home() {
     <div className="container header">
       <Landing.Header />
       <Landing.Services />
+      <Landing.Adventure />
     </div>
   );
 }
