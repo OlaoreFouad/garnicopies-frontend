@@ -1,5 +1,5 @@
-$base-grey: #FFFFFF0D;
-$green : #1FC24D;
+$base-grey: #ffffff0d;
+$green: #1fc24d;
 
 @font-face {
   font-family: gilroyLight;
@@ -16,4 +16,8 @@ $green : #1FC24D;
 @font-face {
   font-family: gilroyBold;
   src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroySemiBold;
+  src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
 }
