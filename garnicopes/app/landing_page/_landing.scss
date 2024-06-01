@@ -323,24 +323,50 @@
     }
     &__image {
       width: 50%;
+      // h500px
+      // height: auto;
+      // height: 500px;
+    }
+
+    @media screen and (max-width: 780px) {
+      flex-direction: column;
+      &__info,
+      &__image {
+        width: 100%;
+      }
     }
     h2 {
       font-style: gilroyBold;
       font-weight: 700;
       font-size: 3em;
     }
-    h4{
+    h4 {
       font-family: gilroySemiBold;
       font-size: 1.2em;
     }
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      // object-fit: cover;
     }
-    p{
+    p {
       font-family: gilroyRegular;
+      letter-spacing: 1.5px;
+      line-height: 1.4em;
 
+      span {
+        // font-style: gilroyBold;
+
+        font-weight: 700;
+        color: $green;
+      }
+    }
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+    @media screen and (max-width: 780px) {
+      flex-direction: column-reverse;
     }
   }
 }

@@ -91,6 +91,20 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
     setIsOpen((isOpen) => !isOpen);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      // Prevent scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow when component unmounts or when isOpen changes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
   const linkVariants = {
     hidden: (index: number) => ({
       x: 100,
