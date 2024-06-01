@@ -91,6 +91,20 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
     setIsOpen((isOpen) => !isOpen);
   };
 
+  useEffect(() => {
+    if (isOpen) {
+      // Prevent scrolling
+      document.body.style.overflow = "hidden";
+    } else {
+      // Re-enable scrolling
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow when component unmounts or when isOpen changes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
   const linkVariants = {
     hidden: (index: number) => ({
       x: 100,
@@ -131,7 +145,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
     >
       <div className="sidenav__links">
         <div className="top_section">
-          <Link href={"/"}>
+          <Link href={"/"} onClick={handleClick}>
             <Image
               src="/logo.png"
               alt="Vercel Logo"
@@ -168,6 +182,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
                   ? "nav__nav_link active"
                   : "nav__nav_link"
               }
+              onClick={handleClick}
             >
               {path.label}
             </Link>
@@ -179,9 +194,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
 };
 
 const Nav = () => {
-  return (
-    <div className="nav_body">{<DesktopNav />}</div>
-  );
+  return <div className="nav_body">{<DesktopNav />}</div>;
 };
 
 export default Nav;
