@@ -131,7 +131,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
     >
       <div className="sidenav__links">
         <div className="top_section">
-          <Link href={"/"}>
+          <Link href={"/"} onClick={handleClick}>
             <Image
               src="/logo.png"
               alt="Vercel Logo"
@@ -168,6 +168,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
                   ? "nav__nav_link active"
                   : "nav__nav_link"
               }
+              onClick={handleClick}
             >
               {path.label}
             </Link>
@@ -179,9 +180,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
 };
 
 const Nav = () => {
-  return (
-    <div className="nav_body">{<DesktopNav />}</div>
-  );
+  return <div className="nav_body">{<DesktopNav />}</div>;
 };
 
 export default Nav;
