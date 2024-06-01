@@ -21,15 +21,17 @@ export function Adventure() {
             linger had turned into a maze of missed opportunities.
           </p>
         </div>
-        <Image
-          src="/adv1.png"
-          alt="Vercel Logo"
-          className="adv__image"
-          width={150}
-          height={34}
-          priority
-        />
-        ;
+        <div className="adv__image">
+          <Image
+            src="/adv1.png"
+            alt="Vercel Logo"
+            // className="adv__image"
+            width={150}
+            height={34}
+            priority
+          />
+        </div>
+        
       </div>
     </div>
   );

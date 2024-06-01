@@ -458,11 +458,30 @@
 }
 .adventure .adv {
   display: flex;
+  justify-content: space-between;
+}
+.adventure .adv__info {
+  width: 40%;
+}
+.adventure .adv__image {
+  width: 50%;
+}
+.adventure .adv h2 {
+  font-style: gilroyBold;
+  font-weight: 700;
+  font-size: 3em;
+}
+.adventure .adv h4 {
+  font-family: gilroySemiBold;
+  font-size: 1.2em;
 }
 .adventure .adv img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.adventure .adv p {
+  font-family: gilroyRegular;
 }
 
 .container {

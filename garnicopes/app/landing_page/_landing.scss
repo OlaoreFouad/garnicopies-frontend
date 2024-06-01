@@ -311,17 +311,36 @@
   }
 }
 
-
-.adventure{
+.adventure {
   text-align: start;
 
-  .adv{
+  .adv {
     display: flex;
+    justify-content: space-between;
 
-    img{
+    &__info {
+      width: 40%;
+    }
+    &__image {
+      width: 50%;
+    }
+    h2 {
+      font-style: gilroyBold;
+      font-weight: 700;
+      font-size: 3em;
+    }
+    h4{
+      font-family: gilroySemiBold;
+      font-size: 1.2em;
+    }
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    p{
+      font-family: gilroyRegular;
+
     }
   }
 }
