@@ -7,6 +7,7 @@ export default function Home() {
       <Landing.Header />
       <Landing.Services />
       <Landing.Adventure />
+      <Landing.Portfolio />
     </div>
   );
 }
