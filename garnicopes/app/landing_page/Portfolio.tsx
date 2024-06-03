@@ -1,12 +1,69 @@
 import React from "react";
+import Link from "next/link";
+// import bgImage from "/static/prot_img.png";
 
 interface Clients {
   tag: string;
   brand: string;
   industry: string;
-  info: string;
+  info: any;
+  img: string;
 }
 
+const data: Array<Clients> = [
+  {
+    tag: "Client",
+    brand: "APPLE INC.",
+    industry: "Electronics & Gadgets Manufacturers",
+    info: (
+      <p>
+        With strategic storytelling and the alchemy of persuasive language, the
+        business not only reversed its fortunes but flourished in a kingdom of
+        results.
+        <span>
+          {" "}
+          Conversions soared, the bounce rate became a distant memory, and the
+          brand thrived in the spotlight of success.{" "}
+        </span>
+      </p>
+    ),
+    img: "port",
+  },
+  {
+    tag: "Client",
+    brand: "NETFLIX",
+    industry: "Movie Production & Services",
+    info: (
+      <p>
+        With strategic storytelling and the alchemy of persuasive language, the
+        business not only reversed its fortunes but flourished in a kingdom of
+        results.{" "}
+        <span>
+          Conversions soared, the bounce rate became a distant memory, and the
+          brand thrived in the spotlight of success.
+        </span>
+      </p>
+    ),
+    img: "prot_img",
+  },
+  {
+    tag: "Client",
+    brand: "FACEBOOK",
+    industry: "Chatting App",
+    info: (
+      <p>
+        With strategic storytelling and the alchemy of persuasive language, the
+        business not only reversed its fortunes but flourished in a kingdom of
+        results.{" "}
+        <span>
+          Conversions soared, the bounce rate became a distant memory, and the
+          brand thrived in the spotlight of success.
+        </span>
+      </p>
+    ),
+    img: "port1",
+  },
+];
 export function Portfolio() {
   return (
     <section className="portfolio">
@@ -15,12 +72,26 @@ export function Portfolio() {
         Copies that brings <span>Crazy</span> Results
       </h2>
       <div className="brand__container">
-        <div className="brand">
-          <div className="info">
-            <h3 className="heading">fasdfdsafdsfasf</h3>
-            <p className="info__details">dfsafdsfsf</p>
-          </div>
-        </div>
+        {data.map((element, index) => {
+          return (
+            <div key={index} className="brand">
+              <div className="image">
+                <img src={"/" + element.img + ".png"} alt="" />
+              </div>
+              <div className="info">
+                <p className="tag">{element.tag}</p>
+                <h3 className="brand__name">{element.brand}</h3>
+                <p className="industry">{element.industry}</p>
+                <p className="info__details">{element.info}</p>
+                <div className="button__container">
+                  <Link href={"/"} className="button">
+                    View Project
+                  </Link>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
