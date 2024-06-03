@@ -30,7 +30,7 @@ const services: Service[] = [
 
 export function Services() {
   return (
-    <div className="services">
+    <div className="services" id="services" >
       <p className=" section__tag">Services</p>
       <h2 className="services__heading">
         COPIES WITH A <span>F</span>
