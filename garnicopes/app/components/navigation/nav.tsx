@@ -93,14 +93,10 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
 
   useEffect(() => {
     if (isOpen) {
-      // Prevent scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Re-enable scrolling
       document.body.style.overflow = "auto";
     }
-
-    // Cleanup function to reset overflow when component unmounts or when isOpen changes
     return () => {
       document.body.style.overflow = "auto";
     };

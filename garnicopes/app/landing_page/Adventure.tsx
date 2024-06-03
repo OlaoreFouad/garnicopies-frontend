@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 // import adventure from '../../'
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface AdventureModel {
   heading?: string;
@@ -12,12 +14,12 @@ interface AdventureModel {
 const data: Array<AdventureModel> = [
   {
     heading: "Turning Clicks into Cheers",
-    subHeading: "The Quest for Engagement",
+    // subHeading: "The Quest for Engagement",
     img: "adv1",
     info: (
       <p>
         {" "}
-        Once upon a digital landscape, a thriving online business found itself
+        Once upon a digital landscape, a thriving online business found itself{" "}
         <span>
           trapped in the perplexing forest of low conversions, a sky-high bounce
           rate, and dwindling brand engagement.
@@ -62,11 +64,13 @@ const data: Array<AdventureModel> = [
 
 export function Adventure() {
   return (
-    <div className="adventure">
+    <section className="adventure">
       <p className=" section__tag">The Copywriting Adventure</p>
       {data.map((element, index) => {
         return (
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             key={index}
             className={
               element.reverse
@@ -82,19 +86,19 @@ export function Adventure() {
             </div>
 
             <div className="adv__image">
-              <img src={"/" + element.img + ".png"} alt="" />
-              {/* <Image
-            src="/adv1.png"
-            alt="Vercel Logo"
-            // className="adv__image"
-            width={150}
-            height={34}
-            priority
-          /> */}
+              {/* <img src={"/" + element.img + ".png"} alt="" /> */}
+              <Image
+                src={"/" + element.img + ".png"}
+                alt="Vercel Logo"
+                // className="adv__image"
+                width={1000}
+                height={34}
+                priority
+              />
             </div>
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </section>
   );
 }

@@ -26,7 +26,7 @@ body {
     )
     rgb(var(--background-start-rgb)); */
   background: #000;
-
+  color: white;
 }
 
 /* @layer utilities {
