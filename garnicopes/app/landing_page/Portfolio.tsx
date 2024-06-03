@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 // import bgImage from "/static/prot_img.png";
-
+import Image from "next/image";
 interface Clients {
   tag: string;
   brand: string;
@@ -76,7 +76,15 @@ export function Portfolio() {
           return (
             <div key={index} className="brand">
               <div className="image">
-                <img src={"/" + element.img + ".png"} alt="" />
+                {/* <img src={"/" + element.img + ".png"} alt="" /> */}
+                <Image
+                  src={"/" + element.img + ".png"}
+                  alt="Vercel Logo"
+                //   className="scrollImg"
+                  width={1000}
+                  height={1000}
+                  priority
+                />
               </div>
               <div className="info">
                 <p className="tag">{element.tag}</p>
