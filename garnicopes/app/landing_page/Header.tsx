@@ -25,7 +25,7 @@ export function Header() {
         </Link>
       </div>
 
-      <Link href={"/"}>
+      <Link href={"#services"}>
         <Image
           src="/scroll.png"
           alt="Vercel Logo"

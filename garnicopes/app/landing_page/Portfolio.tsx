@@ -16,7 +16,7 @@ const data: Array<Clients> = [
     brand: "APPLE INC.",
     industry: "Electronics & Gadgets Manufacturers",
     info: (
-      <p>
+      <p className="info__details">
         With strategic storytelling and the alchemy of persuasive language, the
         business not only reversed its fortunes but flourished in a kingdom of
         results.
@@ -34,7 +34,7 @@ const data: Array<Clients> = [
     brand: "NETFLIX",
     industry: "Movie Production & Services",
     info: (
-      <p>
+      <p className="info__details">
         With strategic storytelling and the alchemy of persuasive language, the
         business not only reversed its fortunes but flourished in a kingdom of
         results.{" "}
@@ -51,7 +51,7 @@ const data: Array<Clients> = [
     brand: "FACEBOOK",
     industry: "Chatting App",
     info: (
-      <p>
+      <p className="info__details">
         With strategic storytelling and the alchemy of persuasive language, the
         business not only reversed its fortunes but flourished in a kingdom of
         results.{" "}
@@ -82,7 +82,7 @@ export function Portfolio() {
                 <p className="tag">{element.tag}</p>
                 <h3 className="brand__name">{element.brand}</h3>
                 <p className="industry">{element.industry}</p>
-                <p className="info__details">{element.info}</p>
+                {element.info}
                 <div className="button__container">
                   <Link href={"/"} className="button">
                     View Project
