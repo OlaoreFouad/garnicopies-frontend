@@ -76,14 +76,12 @@ export function Portfolio() {
           return (
             <div key={index} className="brand">
               <div className="image">
-                {/* <img src={"/" + element.img + ".png"} alt="" /> */}
                 <Image
                   src={"/" + element.img + ".png"}
-                  alt="Vercel Logo"
-                //   className="scrollImg"
+                  alt="Company Logo"
                   width={1000}
                   height={1000}
-                  priority
+                  objectFit="cover"
                 />
               </div>
               <div className="info">

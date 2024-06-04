@@ -35,10 +35,6 @@ export function Header() {
           priority
         />
       </Link>
-
-      {/* <Link href={"/"} className="button">
-        Let's Talk
-      </Link> */}
     </>
   );
 }
