@@ -78,13 +78,10 @@ export function Portfolio() {
               <div className="image">
                 <Image
                   src={"/" + element.img + ".png"}
-                  alt="Vercel Logo"
-                //   className="scrollImg"
+                  alt="Company Logo"
                   width={1000}
                   height={1000}
                   objectFit="cover"
-                //   fill
-                // layout="responsive"
                 />
               </div>
               <div className="info">

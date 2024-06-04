@@ -33,7 +33,7 @@ function Footer() {
         {paths.map((element, index) => {
           return (
             <li key={index}>
-              <Link href={"/"}>{element.label}</Link>
+              <Link href={element.pathname}>{element.label}</Link>
             </li>
           );
         })}

@@ -348,12 +348,9 @@
     }
     &__image {
       width: 50%;
-      // h500px
-      // height: auto;
-      // height: 500px;
-      img {
-        // width: 200px;
-        // height: 100px;
+      img{
+        width: 100%;
+        height: 100%;
       }
     }
 
