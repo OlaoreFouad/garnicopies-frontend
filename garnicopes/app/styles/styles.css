@@ -117,6 +117,75 @@
   }
 }
 
+footer {
+  background: rgba(255, 255, 255, 0.0509803922);
+  padding: 5vw 10vw;
+  text-align: center;
+}
+footer .footer__img {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer__img img {
+  width: 50%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  footer .footer__img img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 580px) {
+  footer .footer__img img {
+    width: 90%;
+  }
+}
+footer ul {
+  margin-bottom: 3vw;
+  padding: 0px;
+}
+@media screen and (max-width: 768px) {
+  footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+}
+footer ul li {
+  list-style-type: none;
+  display: inline;
+  margin: 0px 20px 0px 0px;
+  font-weight: 500;
+  font-family: gilroyBold;
+}
+@media screen and (max-width: 768px) {
+  footer ul li {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+  }
+}
+footer ul li a {
+  color: rgba(255, 255, 255, 0.466);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+footer ul li a:hover {
+  color: rgba(255, 255, 255, 0.89);
+}
+
 @font-face {
   font-family: gilroyLight;
   src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
@@ -275,6 +344,36 @@
   max-width: 800px;
   width: 90%;
   line-height: 1.1em;
+}
+@media screen and (max-width: 900px) {
+  .services__heading {
+    font-size: 3.5em;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 756px) {
+  .services__heading {
+    font-size: 3.5em;
+    width: 65%;
+  }
+}
+@media screen and (max-width: 602px) {
+  .services__heading {
+    font-size: 3.5em;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .services__heading {
+    font-size: 3.5em;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 372px) {
+  .services__heading {
+    font-size: 2.5em;
+    width: 100%;
+  }
 }
 .services__heading span {
   color: #1fc24d;
@@ -520,8 +619,29 @@
   font-style: gilroyBold;
   font-weight: 700;
   font-size: 3em;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   width: 40%;
+}
+@media screen and (max-width: 1024px) {
+  .portfolio h2 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .portfolio h2 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 512px) {
+  .portfolio h2 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .portfolio h2 {
+    width: 100%;
+    font-size: 2.5em;
+  }
 }
 .portfolio h2 span {
   text-decoration: line-through;

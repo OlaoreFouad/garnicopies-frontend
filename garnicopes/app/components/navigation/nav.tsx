@@ -83,7 +83,6 @@ const DesktopNav = () => {
 };
 
 /**This section is for when the web application is on mobile View */
-
 const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
   const pathname = usePathname();
 
