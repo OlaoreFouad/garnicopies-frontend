@@ -2,6 +2,7 @@
 
 .contact {
   width: 540px;
+  position: relative;
 
   margin: auto;
 
@@ -180,12 +181,43 @@
       }
     }
   }
+
+  .images {
+    position: absolute;
+    top: 50%;
+    width: 150%;
+    height: 100%;
+    // background: red;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 170px;
+      height: 170px;
+      position: absolute;
+      &:nth-child(1) {
+        left: 00%;
+        top: 10%;
+      }
+      &:nth-child(2) {
+        right: 0%;
+        top: 10%;
+      }
+      &:nth-child(3) {
+        left: 5%;
+        top: 40%;
+      }
+      &:nth-child(4) {
+        right: 5%;
+        top: 40%;
+      }
+      &:nth-child(5) {
+        left: 10%;
+        bottom: 10%;
+      }
+      &:nth-child(6) {
+        right: 10%;
+        bottom: 10%;
+      }
+    }
+  }
 }
-
-
-  // @for $i from 1 through 4 {
-  //     &:nth-child(#{$i})::after {
-  //       background-image: url("/services_bg_#{$i}.png"),
-  //         linear-gradient(90deg, #19171b, #19171b);
-  //     }
-  //   }

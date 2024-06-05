@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
-
+import Image from "next/image";
 function Contact() {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
@@ -24,9 +24,9 @@ function Contact() {
   };
   return (
     <section className="contact">
-      <div className="div">
+      <div className="images">
         {Array.from({ length: 6 }).map((_, i) => (
-          <li key={i}>This is something</li>
+          <Image key={i} src={"/ask.png"} width={1000} height={1000} alt="ask" />
         ))}
       </div>
 
@@ -67,9 +67,7 @@ function Contact() {
           </label>
         </div>
 
-        <button type="submit">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
 
         <div className="socials">
           <Link href={"#"}>
