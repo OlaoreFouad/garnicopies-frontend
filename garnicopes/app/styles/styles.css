@@ -922,6 +922,9 @@ footer ul li a:hover {
 }
 .contact .brand .inputBox input,
 .contact .brand .inputBox textarea {
+  font-family: gilroyRegular;
+  font-weight: 400;
+  font-size: 1.09em;
   width: 100%;
   box-sizing: border-box;
   padding: 5px 10px;
@@ -938,6 +941,13 @@ footer ul li a:hover {
 }
 .contact .brand .inputBox textarea {
   resize: none;
+}
+.contact .brand .inputBox textarea::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  width: 8px;
+}
+.contact .brand .inputBox textarea::-webkit-scrollbar-track {
+  width: 8px;
 }
 .contact .brand .inputBox .active {
   transform: scale(0.7) translate(-25%, -130%);
@@ -956,8 +966,9 @@ footer ul li a:hover {
   cursor: pointer;
 }
 .contact .brand .socials {
-  margin: 0px 0px;
+  margin: 0px auto;
   margin-top: 20px;
+  text-align: center;
 }
 .contact .brand .socials a {
   margin: 0px 10px;

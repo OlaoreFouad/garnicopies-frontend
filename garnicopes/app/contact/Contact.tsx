@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 
@@ -9,22 +9,28 @@ function Contact() {
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  const onChangeName = (e) => {
+  const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
-  const onChangeEmail = (e) => {
+  const onChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
-  const onChangeMessage = (e) => {
+  const onChangeMessage = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
   return (
     <section className="contact">
-      <form action="#" className="brand">
+      <div className="div">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <li key={i}>This is something</li>
+        ))}
+      </div>
+
+      <form action="#" className="brand" onSubmit={handleSubmit}>
         <h2>Do you have</h2>
         <h2 className="green">a question?</h2>
         <p>Fill up the form and our team will get back within 24 hours</p>
@@ -61,7 +67,7 @@ function Contact() {
           </label>
         </div>
 
-        <button type="submit" onSubmit={handleSubmit}>
+        <button type="submit">
           Submit
         </button>
 

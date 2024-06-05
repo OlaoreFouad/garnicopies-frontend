@@ -122,6 +122,9 @@
 
       input,
       textarea {
+        font-family: gilroyRegular;
+        font-weight: 400;
+        font-size: 1.09em;
         width: 100%;
         box-sizing: border-box;
         padding: 5px 10px;
@@ -139,6 +142,15 @@
 
       textarea {
         resize: none;
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 30px;
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+          width: 8px;
+        }
       }
 
       .active {
@@ -159,13 +171,21 @@
       cursor: pointer;
     }
 
-    
-    .socials{
-     margin: 0px 0px;
-     margin-top: 20px;
-     a{
-      margin: 0px 10px;
-     }
+    .socials {
+      margin: 0px auto;
+      margin-top: 20px;
+      text-align: center;
+      a {
+        margin: 0px 10px;
+      }
     }
   }
 }
+
+
+  // @for $i from 1 through 4 {
+  //     &:nth-child(#{$i})::after {
+  //       background-image: url("/services_bg_#{$i}.png"),
+  //         linear-gradient(90deg, #19171b, #19171b);
+  //     }
+  //   }

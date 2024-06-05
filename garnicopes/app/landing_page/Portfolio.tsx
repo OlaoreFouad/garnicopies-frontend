@@ -81,7 +81,7 @@ export function Portfolio() {
                   alt="Company Logo"
                   width={1000}
                   height={1000}
-                  objectFit="cover"
+                  // objectFit="cover"
                 />
               </div>
               <div className="info">
