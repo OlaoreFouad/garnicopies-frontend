@@ -119,7 +119,7 @@
 
 footer {
   background: rgba(255, 255, 255, 0.0509803922);
-  padding: 5vw 10vw;
+  padding: 3vw 10vw;
   text-align: center;
 }
 footer .footer__img {
@@ -129,7 +129,7 @@ footer .footer__img {
   align-items: center;
 }
 footer .footer__img img {
-  width: 50%;
+  width: 30%;
   height: auto;
 }
 @media screen and (max-width: 768px) {
@@ -816,12 +816,17 @@ footer ul li a:hover {
   font-family: gilroySemiBold;
   src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
 }
+.contact {
+  width: 540px;
+  margin: auto;
+}
 .contact .brand {
+  box-sizing: border-box;
   cursor: pointer;
   width: fit-content;
-  transition: 0.5s;
+  transition: 0.3s;
   margin: 6vh auto;
-  padding: 15px;
+  padding: 4vw;
   background: black;
   position: relative;
   background-image: linear-gradient(120.12deg, #acacac 0%, rgba(0, 0, 0, 0) 50.06%, #ffffff 97.94%);
@@ -834,8 +839,8 @@ footer ul li a:hover {
   gap: 30px;
 }
 .contact .brand:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(31, 194, 77, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(110, 110, 110, 0.7);
 }
 .contact .brand::before {
   content: "";
@@ -864,9 +869,6 @@ footer ul li a:hover {
   box-sizing: border-box;
   z-index: -10;
 }
-.contact .brand:hover::before {
-  animation: bgRotate 3s 1;
-}
 @keyframes bgRotate {
   0% {
     width: 30%;
@@ -885,16 +887,91 @@ footer ul li a:hover {
     transform: translate(-50%, -50%) rotate(35deg);
   }
 }
+.contact .brand h2,
+.contact .brand p {
+  text-align: center;
+}
+.contact .brand h2 {
+  font-family: gilroyBold;
+  font-size: 3.5em;
+  margin: 0px;
+  text-transform: capitalize;
+}
+.contact .brand h2:nth-child(2) {
+  color: #1fc24d;
+}
+.contact .brand p {
+  font-family: gilroyRegular;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin: 30px auto;
+}
 .contact .brand .inputBox {
+  font-family: gilroyRegular;
+  font-weight: 400;
+  color: white;
   position: relative;
+  margin: 30px auto;
 }
 .contact .brand .inputBox label {
   position: absolute;
   left: 0%;
-  color: blue;
+  margin: 3px 10px;
+  transition: 0.3s;
 }
-.contact .brand .inputBox label.filled {
-  top: 20%;
+.contact .brand .inputBox input,
+.contact .brand .inputBox textarea {
+  font-family: gilroyRegular;
+  font-weight: 400;
+  font-size: 1.09em;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  border-bottom: 2px solid rgba(31, 194, 77, 0.3019607843);
+}
+.contact .brand .inputBox input:focus + label,
+.contact .brand .inputBox textarea:focus + label {
+  transform: scale(0.7) translate(-25%, -130%);
+  color: #1fc24d;
+}
+.contact .brand .inputBox textarea {
+  resize: none;
+}
+.contact .brand .inputBox textarea::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  width: 8px;
+}
+.contact .brand .inputBox textarea::-webkit-scrollbar-track {
+  width: 8px;
+}
+.contact .brand .inputBox .active {
+  transform: scale(0.7) translate(-25%, -130%);
+  color: #1fc24d;
+}
+.contact .brand button {
+  font-family: gilroyBold;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.2em;
+  background: #1fc24d;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contact .brand .socials {
+  margin: 0px auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.contact .brand .socials a {
+  margin: 0px 10px;
 }
 
 .container {
