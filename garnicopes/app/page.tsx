@@ -1,5 +1,6 @@
 import Image from "next/image";
 import * as Landing from "./landing_page";
+import Contact from "./contact/Contact";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Landing.Services />
       <Landing.Adventure />
       <Landing.Portfolio />
+      <Contact />
     </div>
   );
 }

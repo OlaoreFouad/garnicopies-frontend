@@ -1,6 +1,6 @@
 footer {
   background: #ffffff0d;
-  padding: 5vw 10vw;
+  padding: 3vw 10vw;
   text-align: center;
 
   .footer__img {
@@ -10,7 +10,7 @@ footer {
     align-items: center;
     img {
       // width: 40% !important;
-      width: 50%;
+      width: 30%;
       height: auto;
 
       @media screen and (max-width: 768px) {
