@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 function Contact() {
   const [email, setEmail] = useState<string>("");
@@ -23,10 +25,20 @@ function Contact() {
     e.preventDefault();
   };
   return (
-    <section className="contact">
+    <motion.section
+      className="contact"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       <div className="images">
         {Array.from({ length: 6 }).map((_, i) => (
-          <Image key={i} src={"/ask.png"} width={1000} height={1000} alt="ask" />
+          <Image
+            key={i}
+            src={"/ask.png"}
+            width={1000}
+            height={1000}
+            alt="ask"
+          />
         ))}
       </div>
 
@@ -78,7 +90,7 @@ function Contact() {
           </Link>
         </div>
       </form>
-    </section>
+    </motion.section>
   );
 }
 
