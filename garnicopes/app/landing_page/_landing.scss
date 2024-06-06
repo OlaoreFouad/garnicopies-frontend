@@ -127,7 +127,6 @@
   &__heading {
     font-family: gilroyBold;
     font-size: 4.25em;
-
     max-width: 800px;
     width: 90%;
     line-height: 1.1em;
@@ -140,7 +139,7 @@
       font-size: 3.5em;
       width: 65%;
     }
-        @media screen and (max-width: 602px) {
+    @media screen and (max-width: 602px) {
       font-size: 3.5em;
       width: 75%;
     }
@@ -150,6 +149,10 @@
     }
     @media screen and (max-width: 372px) {
       font-size: 2.5em;
+      width: 100%;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 2.9em;
       width: 100%;
     }
     span {
@@ -348,7 +351,7 @@
     }
     &__image {
       width: 50%;
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
