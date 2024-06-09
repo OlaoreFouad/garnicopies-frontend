@@ -19,7 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={inter.className}
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: "column",
+          height: "100%",
+        }}
+      >
         <Nav />
         <div className="container">{children}</div>
         <Footer />
@@ -27,3 +35,9 @@ export default function RootLayout({
     </html>
   );
 }
+
+const styles = {
+  display: "flex",
+  justifyContent: "space-between",
+  flexDirection: "column",
+};
