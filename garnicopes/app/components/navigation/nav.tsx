@@ -145,7 +145,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
               src="/logo.png"
               alt="Vercel Logo"
               style={{ zIndex: 33 }}
-              width={150}
+              width={200}
               height={34}
               priority
             />

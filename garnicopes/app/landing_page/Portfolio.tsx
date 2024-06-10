@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
-// import bgImage from "/static/prot_img.png";
 import Image from "next/image";
+
 interface Clients {
   tag: string;
   brand: string;
   industry: string;
   info: any;
+  link: string;
   img: string;
 }
 
@@ -15,6 +16,7 @@ const data: Array<Clients> = [
     tag: "Client",
     brand: "APPLE INC.",
     industry: "Electronics & Gadgets Manufacturers",
+    link: "/",
     info: (
       <p className="info__details">
         With strategic storytelling and the alchemy of persuasive language, the
@@ -33,6 +35,8 @@ const data: Array<Clients> = [
     tag: "Client",
     brand: "NETFLIX",
     industry: "Movie Production & Services",
+    link: "/",
+
     info: (
       <p className="info__details">
         With strategic storytelling and the alchemy of persuasive language, the
@@ -50,6 +54,7 @@ const data: Array<Clients> = [
     tag: "Client",
     brand: "FACEBOOK",
     industry: "Chatting App",
+    link: "/",
     info: (
       <p className="info__details">
         With strategic storytelling and the alchemy of persuasive language, the
@@ -81,7 +86,6 @@ export function Portfolio() {
                   alt="Company Logo"
                   width={1000}
                   height={1000}
-                  // objectFit="cover"
                 />
               </div>
               <div className="info">
@@ -90,7 +94,7 @@ export function Portfolio() {
                 <p className="industry">{element.industry}</p>
                 {element.info}
                 <div className="button__container">
-                  <Link href={"/"} className="button">
+                  <Link href={element.link} className="button">
                     View Project
                   </Link>
                 </div>
@@ -98,6 +102,11 @@ export function Portfolio() {
             </div>
           );
         })}
+      </div>
+      <div className="button__container" style={{ margin: "0px" }}>
+        <Link href={"/"} className="button">
+          View Project
+        </Link>
       </div>
     </section>
   );

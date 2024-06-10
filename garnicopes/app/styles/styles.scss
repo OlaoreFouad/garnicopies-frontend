@@ -27,3 +27,41 @@ a {
     margin: auto;
   }
 }
+
+.about__page {
+  &__header {
+    text-align: center;
+    h2 {
+      font-style: gilroyBold;
+      font-weight: 700;
+      font-size: 3em;
+    }
+    p {
+      font-family: gilroyRegular;
+      letter-spacing: 1.5px;
+      line-height: 1.4em;
+      font-size: 1.1em;
+      width: 100%;
+      max-width: 600px;
+      font-weight: 500;
+      margin: 0px auto;
+
+      span {
+        font-weight: 700;
+        color: #1b9e40;
+      }
+    }
+  }
+  .adv__info {
+    h2 {
+      margin: 0px;
+    }
+    h4 {
+      margin: 10px 0px;
+      font-size: 1.9em;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

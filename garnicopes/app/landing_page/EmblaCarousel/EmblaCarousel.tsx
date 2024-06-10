@@ -9,9 +9,10 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
+import { Testimonail } from "../Testimonials";
 
 type PropType = {
-  slides: number[];
+  slides: Testimonail[];
   options?: EmblaOptionsType;
 };
 
@@ -33,33 +34,26 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <section className="embla ">
       <div className="embla__viewport brand" ref={emblaRef}>
         <div className="embla__container ">
-          {slides.map((index) => (
+          {slides.map((element, index) => (
             <div className="embla__slide" key={index}>
               <div className="slide__container">
                 <div className="slide__heading">
                   <div className="slide__img">
                     <Image
-                      src={"/testimonial1.png"}
+                      src={"/" + element.image + ".png"}
                       alt="Image of person"
                       width={1000}
                       height={1000}
                     />
                   </div>
                   <div className="heading__info">
-                    <h3>Karim Benzema</h3>
-                    <p>Google CEO</p>
+                    <h3>{element.name}</h3>
+                    <p>{element.position}</p>
                   </div>
                 </div>
                 <div className="slide__info">
-                  <h4>
-                    Garnicopies good care of your Business, cares about your
-                    success just as much as
-                  </h4>
-                  <p>
-                    Garnicopies absolutely changed the game in our
-                    copywriting!... There is strategy, ideas, and support that
-                    allows us to reach our target audience on a deeper level.
-                  </p>
+                  <h4>{element.heading}</h4>
+                  <p>{element.testimonial}</p>
                 </div>
               </div>
             </div>

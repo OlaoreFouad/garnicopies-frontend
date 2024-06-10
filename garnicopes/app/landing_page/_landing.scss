@@ -342,7 +342,7 @@
   .adv {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0px;
+    margin: 40px 0px;
 
     &__info {
       width: 40%;
@@ -351,6 +351,12 @@
     }
     &__image {
       width: 50%;
+      padding: 20px;
+
+      @media screen and (max-width: 780px) {
+        padding: 0px;
+      }
+      box-sizing: border-box;
       img {
         width: 100%;
         height: 100%;
@@ -376,7 +382,6 @@
     img {
       width: 100%;
       height: 100%;
-      // object-fit: cover;
     }
     p {
       font-family: gilroyRegular;
@@ -403,7 +408,7 @@
 .portfolio {
   color: white;
   text-align: start;
-  margin: 10vh auto;
+  margin: 15vh auto;
   h2 {
     font-style: gilroyBold;
     font-weight: 700;
@@ -588,19 +593,36 @@
   }
 }
 
-
-
-
-.testimonial{
-  .slider{
-    position: relative;
-    .bg__box{
-      width: 100%;
-      height: 60%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+.testimonial {
+  margin: 5vh auto;
+  .star {
+    width: fit-content;
+    img {
+      width: 150px;
+      height: auto;
     }
+
+    margin: auto;
+    text-align: center;
+  }
+
+  &__header {
+    text-align: center;
+    font-family: gilroyBold;
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+}
+
+.slider {
+  position: relative;
+  text-align: start;
+  .bg__box {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

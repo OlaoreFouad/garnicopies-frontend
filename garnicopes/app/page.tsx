@@ -9,7 +9,11 @@ export default function Home() {
       <Landing.Services />
       <Landing.Adventure />
       <Landing.Portfolio />
-      <p className=" section__tag" style={{ textAlign: "start" }}>
+      <Landing.Testimonials />
+      <p
+        className=" section__tag"
+        style={{ textAlign: "start", margin: "10vh auto" }}
+      >
         Contact Us
       </p>
 

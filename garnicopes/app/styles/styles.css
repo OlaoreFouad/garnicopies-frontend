@@ -567,7 +567,7 @@ footer ul li a:hover {
 .adventure .adv {
   display: flex;
   justify-content: space-between;
-  margin: 15px 0px;
+  margin: 40px 0px;
 }
 .adventure .adv__info {
   width: 40%;
@@ -576,6 +576,13 @@ footer ul li a:hover {
 }
 .adventure .adv__image {
   width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 780px) {
+  .adventure .adv__image {
+    padding: 0px;
+  }
 }
 .adventure .adv__image img {
   width: 100%;
@@ -623,7 +630,7 @@ footer ul li a:hover {
 .portfolio {
   color: white;
   text-align: start;
-  margin: 10vh auto;
+  margin: 15vh auto;
 }
 .portfolio h2 {
   font-style: gilroyBold;
@@ -802,14 +809,34 @@ footer ul li a:hover {
   }
 }
 
-.testimonial .slider {
-  position: relative;
+.testimonial {
+  margin: 5vh auto;
 }
-.testimonial .slider .bg__box {
+.testimonial .star {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+.testimonial .star img {
+  width: 150px;
+  height: auto;
+}
+.testimonial__header {
+  text-align: center;
+  font-family: gilroyBold;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.slider {
+  position: relative;
+  text-align: start;
+}
+.slider .bg__box {
   width: 100%;
   height: 60%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -835,7 +862,7 @@ footer ul li a:hover {
   src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
 }
 .embla {
-  max-width: 800px;
+  max-width: 900px;
   width: 90%;
   margin: auto;
   --slide-height: 19rem;
@@ -1169,9 +1196,9 @@ footer ul li a:hover {
   src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
 }
 .contact {
+  margin: 10vh auto;
   width: 540px;
   position: relative;
-  margin: auto;
 }
 @media screen and (max-width: 670px) {
   .contact {
@@ -1509,4 +1536,39 @@ a {
 .work__container h2 {
   text-align: center;
   margin: auto;
+}
+
+.about__page__header {
+  text-align: center;
+}
+.about__page__header h2 {
+  font-style: gilroyBold;
+  font-weight: 700;
+  font-size: 3em;
+}
+.about__page__header p {
+  font-family: gilroyRegular;
+  letter-spacing: 1.5px;
+  line-height: 1.4em;
+  font-size: 1.1em;
+  width: 100%;
+  max-width: 600px;
+  font-weight: 500;
+  margin: 0px auto;
+}
+.about__page__header p span {
+  font-weight: 700;
+  color: #1b9e40;
+}
+.about__page .adv__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about__page .adv__info h2 {
+  margin: 0px;
+}
+.about__page .adv__info h4 {
+  margin: 10px 0px;
+  font-size: 1.9em;
 }/*# sourceMappingURL=styles.css.map */
