@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface Service {
+export interface Service {
   heading: string;
   details: string;
 }
@@ -30,7 +30,7 @@ const services: Service[] = [
 
 export function Services() {
   return (
-    <div className="services" id="services">
+    <section className="services" id="services">
       <p className=" section__tag">Services</p>
       <h2 className="services__heading">
         COPIES WITH A <span>F</span>
@@ -49,7 +49,10 @@ export function Services() {
         make it your reality.
       </p>
 
-      <div className="services__container">
+      <div
+        className="services__container"
+       
+      >
         {services.map((element, index) => {
           return (
             <div key={index} className="services__service">
@@ -61,6 +64,6 @@ export function Services() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }

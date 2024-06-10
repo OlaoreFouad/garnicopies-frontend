@@ -1,6 +1,7 @@
 @import "../styles/base";
 
 .contact {
+  margin: 10vh auto;
   width: 540px;
   position: relative;
 
@@ -8,8 +9,6 @@
     width: 100%;
     height: 120%;
   }
-
-  margin: auto;
 
   .brand {
     box-sizing: border-box;

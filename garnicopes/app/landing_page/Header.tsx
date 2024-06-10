@@ -2,11 +2,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 
 export function Header() {
   const handleClick = () => {};
   return (
-    <>
+    <motion.main
+      initial={{ y: "100%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+    >
       <Image
         src="/header__bg.png"
         alt="Vercel Logo"
@@ -35,6 +40,6 @@ export function Header() {
           priority
         />
       </Link>
-    </>
+    </motion.main>
   );
 }

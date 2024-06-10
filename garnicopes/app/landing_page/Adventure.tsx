@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
-// import adventure from '../../'
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
-interface AdventureModel {
+export interface AdventureModel {
   heading?: string;
   subHeading?: string;
   reverse?: boolean;
@@ -86,11 +85,9 @@ export function Adventure() {
             </div>
 
             <div className="adv__image">
-              {/* <img src={"/" + element.img + ".png"} alt="" /> */}
               <Image
                 src={"/" + element.img + ".png"}
                 alt="Vercel Logo"
-                // className="adv__image"
                 width={1000}
                 height={34}
                 priority
