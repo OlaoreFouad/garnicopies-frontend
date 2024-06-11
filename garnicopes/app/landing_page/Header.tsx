@@ -7,7 +7,11 @@ import { AnimatePresence, motion } from "framer-motion";
 export function Header() {
   const handleClick = () => {};
   return (
+    ///@todo : fix this
     <motion.main
+      style={{
+        padding: "7em 0px",
+      }}
       initial={{ y: "100%", opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}

@@ -225,7 +225,6 @@ footer ul li a:hover {
 .header {
   color: white;
   text-align: center;
-  padding: 7em 0px;
   position: relative;
 }
 .header .bgImg {
@@ -388,6 +387,17 @@ footer ul li a:hover {
 }
 .services__heading span:nth-child(2) {
   transform: rotate(-10deg);
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
 }
 .services__heading span:nth-child(3) {
   transform: rotate(10deg);

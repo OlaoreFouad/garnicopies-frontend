@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 export interface Service {
   heading: string;
@@ -49,18 +51,20 @@ export function Services() {
         make it your reality.
       </p>
 
-      <div
-        className="services__container"
-       
-      >
+      <div className="services__container">
         {services.map((element, index) => {
           return (
-            <div key={index} className="services__service">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              key={index}
+              className="services__service"
+            >
               <div className="info">
                 <h3 className="heading">{element.heading}</h3>
                 <p className="info__details">{element.details}</p>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

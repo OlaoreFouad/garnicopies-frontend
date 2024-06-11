@@ -15,7 +15,6 @@
 .header {
   color: white;
   text-align: center;
-  padding: 7em 0px;
   position: relative;
 
   .bgImg {
@@ -161,6 +160,19 @@
       margin: 0px 1px;
       &:nth-child(2) {
         transform: rotate(-10deg);
+        // animation: rotate1 2s ease-in-out infinite;
+
+        @keyframes rotate1 {
+          0% {
+            transform: rotate(-10deg);
+          }
+          50% {
+            transform: rotate(10deg);
+          }
+          100% {
+            transform: rotate(-10deg);
+          }
+        }
       }
       &:nth-child(3) {
         transform: rotate(10deg);
