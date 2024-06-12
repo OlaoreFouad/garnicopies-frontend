@@ -42,12 +42,8 @@ function Footer() {
         <Image
           src={"/footer.png"}
           alt="Vercel Logo"
-          //   className="scrollImg"
           width={1500}
           height={1150}
-          //   objectFit="cover"
-          //   fill
-          //   layout="responsive"
         />
       </div>
     </footer>

@@ -41,9 +41,9 @@ const DesktopNav = () => {
         <Image
           src="/logo.png"
           alt="Vercel Logo"
-          // className="dark:invert"
-          width={150}
-          height={30}
+          className="nav__logo"
+          width={1000}
+          height={1000}
           priority
         />
       </Link>
