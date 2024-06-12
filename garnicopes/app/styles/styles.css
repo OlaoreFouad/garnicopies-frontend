@@ -882,6 +882,28 @@ footer ul li a:hover {
   transform: translate(-50%, -50%);
 }
 
+.strength {
+  background: red;
+  margin: 10vh auto;
+  padding: 3vh 0pc;
+  font-family: gilroyBold;
+}
+.strength__descriptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  color: rgba(255, 255, 255, 0.3019607843);
+}
+.strength__descriptions p {
+  margin: auto 0px;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.strength__descriptions p.bold {
+  font-size: 7em;
+}
+
 @font-face {
   font-family: gilroyLight;
   src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
