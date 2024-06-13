@@ -3,6 +3,7 @@ import { Testimonials } from "../landing_page/Testimonials";
 import { AnimatePresence, motion } from "framer-motion";
 import { AdventureModel } from "../landing_page/Adventure";
 import Image from "next/image";
+import Strengths from "./Strengths";
 
 const data: Array<AdventureModel> = [
   {
@@ -47,12 +48,13 @@ function Page() {
         <p>
           Our journey started with a passion for crafting compelling, authentic
           content that resonates with audiences. As a team of creative minds, we
-          set out to create a copywriting studio<span> that focuses on organic,
-          impactful writing.</span>
+          set out to create a copywriting studio
+          <span> that focuses on organic, impactful writing.</span>
         </p>
       </div>
       <Story />
 
+      <Strengths />
       <Testimonials />
     </motion.div>
   );

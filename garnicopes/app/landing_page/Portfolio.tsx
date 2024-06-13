@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Clients {
   tag: string;
@@ -79,7 +81,12 @@ export function Portfolio() {
       <div className="brand__container">
         {data.map((element, index) => {
           return (
-            <div key={index} className="brand">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              key={index}
+              className="brand"
+            >
               <div className="image">
                 <Image
                   src={"/" + element.img + ".png"}
@@ -99,7 +106,7 @@ export function Portfolio() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

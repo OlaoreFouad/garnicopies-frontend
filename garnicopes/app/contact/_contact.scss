@@ -135,6 +135,31 @@
         transition: 0.3s;
       }
 
+      select + label {
+        // top: 0%;
+      }
+      select {
+        background: #19171b;
+        border: none;
+        outline: none;
+        color: white;
+        font-family: gilroyRegular;
+        font-weight: 400;
+        font-size: 1.09em;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        outline: none;
+        margin: 0px;
+        color: white;
+        border-bottom: 2px solid #1fc24d4d;
+
+        &:focus + label {
+          transform: scale(0.7) translate(-25%, -130%);
+          color: $green;
+        }
+      }
+
       input,
       textarea {
         font-family: gilroyRegular;
