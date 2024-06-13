@@ -41,17 +41,17 @@
 
   .scrollImg {
     margin: auto;
-    margin-top: 11em;
+    margin-top: 10em;
     animation: moving 1s ease-in-out infinite;
     @keyframes moving {
       0% {
-        margin-top: 11em;
+        transform: translateY(0px);
       }
       50% {
-        margin-top: 13em;
+        transform: translateY(10px);
       }
       100% {
-        margin-top: 11em;
+        transform: translateY(0px);
       }
     }
   }
@@ -80,6 +80,9 @@
 
     @media screen and (max-width: 570px) {
       font-size: 3.5em;
+    }
+    @media screen and (max-width: 530px) {
+      font-size: 3.2em;
     }
     @media screen and (max-width: 380px) {
       font-size: 3em;
@@ -655,6 +658,10 @@
   }
 }
 
+
+
+
+//This is part of the portfolio section 
 .strength {
   margin: 15vh auto;
   padding: 3vh 0pc;
@@ -674,6 +681,7 @@
     }
     color: #ffffff4d;
     p {
+      // text-border: 2px solid white;
       margin: auto 0px;
       font-size: 4em;
       @media screen and (max-width: 1320px) {

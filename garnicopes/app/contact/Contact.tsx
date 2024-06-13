@@ -10,6 +10,11 @@ function Contact() {
   const [email, setEmail] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [selectedPurpose, setSelectedPurpose] = useState("");
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSelectedPurpose(event.target.value);
+  };
 
   const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -46,6 +51,40 @@ function Contact() {
         <h2>Do you have</h2>
         <h2 className="green">a question?</h2>
         <p>Fill up the form and our team will get back within 24 hours</p>
+
+        {/* <div className="inputBox">
+          <input
+            type="text"
+            id="purpose"
+            readOnly
+            onClick={() => console.log("hello")}
+          />
+          <label htmlFor="purpose">Purpose</label>
+        </div>
+
+        <div className="drpodown">
+          <ul></ul>
+        </div> */}
+
+        <div className="inputBox">
+          <select
+            id="purpose"
+            value={selectedPurpose}
+            onChange={handleChange}
+            style={{ width: "100%" }}
+          >
+            <option value="" disabled></option>
+            <option value="question">Question</option>
+            <option value="feedback">Feedback</option>
+            <option value="support">Support</option>
+          </select>
+          <label
+            htmlFor="purpose"
+            className={selectedPurpose.length > 0 ? "active" : ""}
+          >
+            Purpose
+          </label>
+        </div>
 
         <div className="inputBox">
           <input type="text" id="name" onChange={onChangeName} value={name} />

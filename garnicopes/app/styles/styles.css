@@ -255,18 +255,18 @@ footer ul li a:hover {
 }
 .header .scrollImg {
   margin: auto;
-  margin-top: 11em;
+  margin-top: 10em;
   animation: moving 1s ease-in-out infinite;
 }
 @keyframes moving {
   0% {
-    margin-top: 11em;
+    transform: translateY(0px);
   }
   50% {
-    margin-top: 13em;
+    transform: translateY(10px);
   }
   100% {
-    margin-top: 11em;
+    transform: translateY(0px);
   }
 }
 .header__tag {
@@ -299,6 +299,11 @@ footer ul li a:hover {
 @media screen and (max-width: 570px) {
   .header__heading {
     font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 530px) {
+  .header__heading {
+    font-size: 3.2em;
   }
 }
 @media screen and (max-width: 380px) {
@@ -1472,6 +1477,26 @@ footer ul li a:hover {
   left: 0%;
   margin: 3px 10px;
   transition: 0.3s;
+}
+.contact .brand .inputBox select {
+  background: #19171b;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: gilroyRegular;
+  font-weight: 400;
+  font-size: 1.09em;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  outline: none;
+  margin: 0px;
+  color: white;
+  border-bottom: 2px solid rgba(31, 194, 77, 0.3019607843);
+}
+.contact .brand .inputBox select:focus + label {
+  transform: scale(0.7) translate(-25%, -130%);
+  color: #1fc24d;
 }
 .contact .brand .inputBox input,
 .contact .brand .inputBox textarea {
