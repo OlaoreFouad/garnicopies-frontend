@@ -883,10 +883,15 @@ footer ul li a:hover {
 }
 
 .strength {
-  background: red;
-  margin: 10vh auto;
+  margin: 15vh auto;
   padding: 3vh 0pc;
   font-family: gilroyBold;
+}
+@media screen and (max-width: 550px) {
+  .strength {
+    margin: 0px;
+    margin-bottom: 5vh;
+  }
 }
 .strength__descriptions {
   display: flex;
@@ -895,13 +900,97 @@ footer ul li a:hover {
   gap: 1.5em;
   color: rgba(255, 255, 255, 0.3019607843);
 }
+@media screen and (max-width: 550px) {
+  .strength__descriptions {
+    gap: 0.7em;
+  }
+}
 .strength__descriptions p {
   margin: auto 0px;
   font-size: 4em;
   text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 1320px) {
+  .strength__descriptions p {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 972px) {
+  .strength__descriptions p {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 880px) {
+  .strength__descriptions p {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 730px) {
+  .strength__descriptions p {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .strength__descriptions p {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .strength__descriptions p {
+    font-size: 0.8em;
+  }
 }
 .strength__descriptions p.bold {
   font-size: 7em;
+}
+@media screen and (max-width: 1320px) {
+  .strength__descriptions p.bold {
+    font-size: 6em;
+  }
+}
+@media screen and (max-width: 1046px) {
+  .strength__descriptions p.bold {
+    font-size: 5em;
+  }
+}
+@media screen and (max-width: 880px) {
+  .strength__descriptions p.bold {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 730px) {
+  .strength__descriptions p.bold {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .strength__descriptions p.bold {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .strength__descriptions p.bold {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .strength__descriptions p.bold {
+    font-size: em;
+  }
+}
+@keyframes glowUp {
+  0% {
+    color: rgba(255, 255, 255, 0.3019607843);
+  }
+  50% {
+    color: #1fc24d;
+    text-shadow: 0px 20px 20px rgba(31, 194, 77, 0.5);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.3019607843);
+  }
 }
 
 @font-face {
