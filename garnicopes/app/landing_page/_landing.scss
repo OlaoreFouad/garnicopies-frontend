@@ -658,10 +658,7 @@
   }
 }
 
-
-
-
-//This is part of the portfolio section 
+//This is part of the portfolio section
 .strength {
   margin: 15vh auto;
   padding: 3vh 0pc;
@@ -730,6 +727,7 @@
         @media screen and (max-width: 320px) {
           font-size: em;
         }
+        // animation: glowUp 1.5s infinite;
 
         // &.one{
         //   animation: glowUp 1.5s 1s infinite;
@@ -750,16 +748,49 @@
         //   }
         // }
 
+        &.one {
+          animation: glowUp 1.5s infinite;
+          animation-delay: 0s;
+        }
+        &.two {
+          animation: glowUp 1.5s infinite;
+          animation-delay: 1.5s;
+        }
+        &.three {
+          animation: glowUp 1.5s infinite;
+          animation-delay: 3s;
+        }
+        &.four {
+          animation: glowUp 1.5s infinite;
+          animation-delay: 4.5s;
+        }
+        &.five {
+          animation: glowUp 1.5s infinite;
+          animation-delay: 6s;
+        }
+
+        &.one,
+        &.two,
+        &.three,
+        &.four,
+        &.five {
+          transition: 0.5s;
+          cursor: pointer;
+          user-select: none;
+          &:hover {
+            color: #626262;
+            transform: scale(1.1);
+            animation: none;
+          }
+        }
         @keyframes glowUp {
-          0% {
+          0%,
+          100% {
             color: #ffffff4d;
           }
           50% {
             color: $green;
-            text-shadow: 0px 20px 20px rgba(31, 194, 77, 0.5);
-          }
-          100% {
-            color: #ffffff4d;
+            text-shadow: 0px 10px 20px rgba(31, 194, 77, 0.349);
           }
         }
       }

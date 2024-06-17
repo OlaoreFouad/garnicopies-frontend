@@ -985,16 +985,43 @@ footer ul li a:hover {
     font-size: em;
   }
 }
+.strength__descriptions p.bold.one {
+  animation: glowUp 1.5s infinite;
+  animation-delay: 0s;
+}
+.strength__descriptions p.bold.two {
+  animation: glowUp 1.5s infinite;
+  animation-delay: 1.5s;
+}
+.strength__descriptions p.bold.three {
+  animation: glowUp 1.5s infinite;
+  animation-delay: 3s;
+}
+.strength__descriptions p.bold.four {
+  animation: glowUp 1.5s infinite;
+  animation-delay: 4.5s;
+}
+.strength__descriptions p.bold.five {
+  animation: glowUp 1.5s infinite;
+  animation-delay: 6s;
+}
+.strength__descriptions p.bold.one, .strength__descriptions p.bold.two, .strength__descriptions p.bold.three, .strength__descriptions p.bold.four, .strength__descriptions p.bold.five {
+  transition: 0.5s;
+  cursor: pointer;
+  user-select: none;
+}
+.strength__descriptions p.bold.one:hover, .strength__descriptions p.bold.two:hover, .strength__descriptions p.bold.three:hover, .strength__descriptions p.bold.four:hover, .strength__descriptions p.bold.five:hover {
+  color: #626262;
+  transform: scale(1.1);
+  animation: none;
+}
 @keyframes glowUp {
-  0% {
+  0%, 100% {
     color: rgba(255, 255, 255, 0.3019607843);
   }
   50% {
     color: #1fc24d;
-    text-shadow: 0px 20px 20px rgba(31, 194, 77, 0.5);
-  }
-  100% {
-    color: rgba(255, 255, 255, 0.3019607843);
+    text-shadow: 0px 10px 20px rgba(31, 194, 77, 0.349);
   }
 }
 
