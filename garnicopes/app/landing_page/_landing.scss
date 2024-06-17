@@ -676,9 +676,14 @@
     @media screen and (max-width: 550px) {
       gap: 0.7em;
     }
+    @media screen and (max-width: 430px) {
+      gap: 0.4em;
+    }
+    @media screen and (max-width: 390px) {
+      gap: 5px;
+    }
     color: #ffffff4d;
     p {
-      // text-border: 2px solid white;
       margin: auto 0px;
       font-size: 4em;
       @media screen and (max-width: 1320px) {
@@ -694,7 +699,10 @@
         font-size: 1.5em;
       }
       @media screen and (max-width: 550px) {
-        font-size: 1.5em;
+        font-size: 1.2em;
+      }
+      @media screen and (max-width: 430px) {
+        font-size: 1em;
       }
       @media screen and (max-width: 320px) {
         font-size: 0.8em;
@@ -724,8 +732,8 @@
         @media screen and (max-width: 550px) {
           font-size: 2.5em;
         }
-        @media screen and (max-width: 320px) {
-          font-size: em;
+        @media screen and (max-width: 378px) {
+          font-size: 2gem;
         }
         // animation: glowUp 1.5s infinite;
 

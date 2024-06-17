@@ -910,6 +910,16 @@ footer ul li a:hover {
     gap: 0.7em;
   }
 }
+@media screen and (max-width: 430px) {
+  .strength__descriptions {
+    gap: 0.4em;
+  }
+}
+@media screen and (max-width: 390px) {
+  .strength__descriptions {
+    gap: 5px;
+  }
+}
 .strength__descriptions p {
   margin: auto 0px;
   font-size: 4em;
@@ -939,7 +949,12 @@ footer ul li a:hover {
 }
 @media screen and (max-width: 550px) {
   .strength__descriptions p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 430px) {
+  .strength__descriptions p {
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 320px) {
@@ -980,9 +995,9 @@ footer ul li a:hover {
     font-size: 2.5em;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 378px) {
   .strength__descriptions p.bold {
-    font-size: em;
+    font-size: 2gem;
   }
 }
 .strength__descriptions p.bold.one {
