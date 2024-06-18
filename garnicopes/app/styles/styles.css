@@ -610,6 +610,11 @@ footer ul li a:hover {
   color: white;
   margin: 10vh auto;
 }
+@media screen and (max-width: 768px) {
+  .adventure {
+    margin: 1vh auto;
+  }
+}
 .adventure .adv {
   display: flex;
   justify-content: space-between;
@@ -892,6 +897,11 @@ footer ul li a:hover {
   padding: 3vh 0pc;
   font-family: gilroyBold;
 }
+@media screen and (max-width: 768px) {
+  .strength {
+    margin: 0px auto;
+  }
+}
 @media screen and (max-width: 550px) {
   .strength {
     margin: 0px;
@@ -908,6 +918,16 @@ footer ul li a:hover {
 @media screen and (max-width: 550px) {
   .strength__descriptions {
     gap: 0.7em;
+  }
+}
+@media screen and (max-width: 430px) {
+  .strength__descriptions {
+    gap: 0.4em;
+  }
+}
+@media screen and (max-width: 390px) {
+  .strength__descriptions {
+    gap: 5px;
   }
 }
 .strength__descriptions p {
@@ -939,12 +959,22 @@ footer ul li a:hover {
 }
 @media screen and (max-width: 550px) {
   .strength__descriptions p {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 430px) {
+  .strength__descriptions p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 340px) {
   .strength__descriptions p {
     font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 302px) {
+  .strength__descriptions p {
+    font-size: 0.7em;
   }
 }
 .strength__descriptions p.bold {
@@ -980,9 +1010,19 @@ footer ul li a:hover {
     font-size: 2.5em;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 378px) {
   .strength__descriptions p.bold {
-    font-size: em;
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 340px) {
+  .strength__descriptions p.bold {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 280px) {
+  .strength__descriptions p.bold {
+    font-size: 1.5em;
   }
 }
 .strength__descriptions p.bold.one {
