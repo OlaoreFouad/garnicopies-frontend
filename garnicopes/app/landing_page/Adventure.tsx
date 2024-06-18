@@ -14,7 +14,7 @@ const data: Array<AdventureModel> = [
   {
     heading: "Turning Clicks into Cheers",
     // subHeading: "The Quest for Engagement",
-    img: "adv1",
+    img: "smile",
     info: (
       <p>
         {" "}
