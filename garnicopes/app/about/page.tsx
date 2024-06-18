@@ -53,7 +53,6 @@ function Page() {
         </p>
       </div>
       <Story />
-
       <Strengths />
       <Testimonials />
     </motion.div>
@@ -76,7 +75,6 @@ const Story = () => {
                 ? "adv-container adv reverse"
                 : "adv-container adv"
             }
-            style={{}}
           >
             <div className="adv__info">
               <h2>{element.heading}</h2>
