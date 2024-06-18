@@ -35,6 +35,17 @@ function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
+
+  // const mailchimpClient = require("@mailchimp/mailchimp_transactional")(
+  //   "YOUR_API_KEY"
+  // );
+
+  // const run = async () => {
+  //   const response = await mailchimpClient.messages.send({ message: {} });
+  //   console.log(response);
+  // };
+
+
   return (
     <motion.section
       className="contact"
