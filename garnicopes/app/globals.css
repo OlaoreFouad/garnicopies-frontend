@@ -37,3 +37,14 @@ body {
     text-wrap: balance;
   }
 } */
+
+
+::-webkit-scrollbar{
+  background: rgba(58, 57, 57, 0.685);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(114, 114, 114);
+  border-radius: 20px;
+  
+}
