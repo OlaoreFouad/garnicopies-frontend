@@ -354,11 +354,6 @@ footer ul li a:hover {
 .button__container:hover .button {
   color: white;
 }
-.button__container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 2px 40px rgba(255, 255, 255, 0.8);
-}
-
 .services {
   margin: 20vh 0px;
   text-align: start;
@@ -573,10 +568,6 @@ footer ul li a:hover {
 .services__service:nth-child(4)::after {
   background-image: url("/services_bg_4.png"), linear-gradient(90deg, #19171b, #19171b);
 }
-.services__service:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.2);
-}
 .services__service:hover::before {
   animation: bgRotate 3s 1;
 }
@@ -625,10 +616,19 @@ footer ul li a:hover {
   padding: 20px 0px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1200px) {
+  .adventure .adv__info {
+    width: 50%;
+  }
+}
 .adventure .adv__image {
-  width: 50%;
-  padding: 20px;
+  width: 45%;
   box-sizing: border-box;
+}
+@media screen and (max-width: 1000px) {
+  .adventure .adv__image {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 780px) {
   .adventure .adv__image {
@@ -638,6 +638,13 @@ footer ul li a:hover {
 .adventure .adv__image img {
   width: 100%;
   height: 100%;
+  aspect-ratio: inherit;
+  object-fit: cover;
+}
+@media screen and (max-width: 1104px) {
+  .adventure .adv__image img {
+    object-fit: fill;
+  }
 }
 @media screen and (max-width: 780px) {
   .adventure .adv {
@@ -650,11 +657,17 @@ footer ul li a:hover {
 .adventure .adv h2 {
   font-style: gilroyBold;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 4.5em;
+  margin-top: 0px;
 }
 .adventure .adv h4 {
   font-family: gilroySemiBold;
   font-size: 1.2em;
+}
+@media screen and (max-width: 500px) {
+  .adventure .adv h4 {
+    font-size: 1.1em;
+  }
 }
 .adventure .adv img {
   width: 100%;
@@ -663,7 +676,13 @@ footer ul li a:hover {
 .adventure .adv p {
   font-family: gilroyRegular;
   letter-spacing: 1.5px;
-  line-height: 1.4em;
+  line-height: 1.6em;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 500px) {
+  .adventure .adv p {
+    font-size: 1em;
+  }
 }
 .adventure .adv p span {
   font-weight: 700;
@@ -731,10 +750,6 @@ footer ul li a:hover {
   transition-delay: 0.2s;
   z-index: 100;
   gap: 30px;
-}
-.portfolio .brand:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px rgba(31, 194, 77, 0.3);
 }
 @media screen and (max-width: 800px) {
   .portfolio .brand {
@@ -1448,10 +1463,6 @@ footer ul li a:hover {
   z-index: 100;
   gap: 30px;
 }
-.contact .brand:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 20px rgba(110, 110, 110, 0.7);
-}
 @media screen and (max-width: 420px) {
   .contact .brand {
     padding: 20px;
@@ -1815,4 +1826,9 @@ a {
 .about__page .adv__info h4 {
   margin: 10px 0px;
   font-size: 1.9em;
+}
+@media screen and (max-width: 500px) {
+  .about__page .adv__info h4 {
+    font-size: 1.3em;
+  }
 }/*# sourceMappingURL=styles.css.map */
