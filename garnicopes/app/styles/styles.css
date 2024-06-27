@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: gilroyLight;
   src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
@@ -328,6 +327,11 @@ footer ul li a:hover {
   transition: 0.5s;
   border: 1px solid #1fc24d;
 }
+@media screen and (max-width: 400px) {
+  .button__container {
+    margin: 15px auto;
+  }
+}
 .button__container::before {
   position: absolute;
   width: 0%;
@@ -625,7 +629,7 @@ footer ul li a:hover {
   width: 45%;
   box-sizing: border-box;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
   .adventure .adv__image {
     width: 50%;
   }
@@ -660,6 +664,26 @@ footer ul li a:hover {
   font-size: 4.5em;
   margin-top: 0px;
 }
+@media screen and (max-width: 968px) {
+  .adventure .adv h2 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 854px) {
+  .adventure .adv h2 {
+    font-size: 3.5em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .adventure .adv h2 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 302px) {
+  .adventure .adv h2 {
+    font-size: 2.5em;
+  }
+}
 .adventure .adv h4 {
   font-family: gilroySemiBold;
   font-size: 1.2em;
@@ -678,6 +702,16 @@ footer ul li a:hover {
   letter-spacing: 1.5px;
   line-height: 1.6em;
   font-size: 1.1em;
+}
+@media screen and (min-width: 968px) {
+  .adventure .adv p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 860px) {
+  .adventure .adv p {
+    font-size: 1.1em;
+  }
 }
 @media screen and (max-width: 500px) {
   .adventure .adv p {
@@ -727,7 +761,7 @@ footer ul li a:hover {
 @media screen and (max-width: 400px) {
   .portfolio h2 {
     width: 100%;
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 .portfolio h2 span {
@@ -751,18 +785,6 @@ footer ul li a:hover {
   z-index: 100;
   gap: 30px;
 }
-@media screen and (max-width: 800px) {
-  .portfolio .brand {
-    flex-direction: column;
-  }
-  .portfolio .brand .image {
-    flex: 1;
-    height: 300px;
-  }
-  .portfolio .brand .info {
-    flex: 3;
-  }
-}
 .portfolio .brand .image {
   overflow: hidden;
   flex: 1;
@@ -774,6 +796,18 @@ footer ul li a:hover {
   width: 130%;
   height: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  .portfolio .brand {
+    flex-direction: column;
+  }
+  .portfolio .brand .image {
+    flex: none;
+    height: 200px;
+  }
+  .portfolio .brand .info {
+    flex: 3;
+  }
 }
 .portfolio .brand .info {
   flex: 2;
@@ -805,6 +839,12 @@ footer ul li a:hover {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 400px) {
+  .portfolio .brand .info .brand__name {
+    margin: 0px;
+    margin-bottom: 5px;
+  }
+}
 .portfolio .brand .info .industry {
   font-family: gilroyRegular;
   font-weight: 400;
@@ -814,6 +854,11 @@ footer ul li a:hover {
 .portfolio .brand .info .button__container {
   margin: 3em 0px;
 }
+@media screen and (max-width: 400px) {
+  .portfolio .brand .info .button__container {
+    margin: 10px 0px 2em;
+  }
+}
 .portfolio .brand .info__details {
   font-family: gilroyRegular;
   font-weight: 400;
@@ -821,6 +866,11 @@ footer ul li a:hover {
   line-height: 1.4em;
   font-size: 1.1em;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 400px) {
+  .portfolio .brand .info__details {
+    font-size: 0.95em;
+  }
 }
 .portfolio .brand .info__details span {
   color: #1fc24d;
@@ -900,7 +950,7 @@ footer ul li a:hover {
 }
 .slider .bg__box {
   width: 100%;
-  height: 60%;
+  height: 70%;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -951,6 +1001,9 @@ footer ul li a:hover {
   text-transform: uppercase;
   overflow: hidden;
   position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+  user-select: none;
 }
 @media screen and (max-width: 1320px) {
   .strength__descriptions p {
@@ -991,6 +1044,11 @@ footer ul li a:hover {
   .strength__descriptions p {
     font-size: 0.7em;
   }
+}
+.strength__descriptions p:hover {
+  color: #1fc24d;
+  transform: scale(1.1);
+  animation: none;
 }
 .strength__descriptions p.bold {
   font-size: 7em;
@@ -1039,36 +1097,6 @@ footer ul li a:hover {
   .strength__descriptions p.bold {
     font-size: 1.5em;
   }
-}
-.strength__descriptions p.bold.one {
-  animation: glowUp 1.5s infinite;
-  animation-delay: 0s;
-}
-.strength__descriptions p.bold.two {
-  animation: glowUp 1.5s infinite;
-  animation-delay: 1.5s;
-}
-.strength__descriptions p.bold.three {
-  animation: glowUp 1.5s infinite;
-  animation-delay: 3s;
-}
-.strength__descriptions p.bold.four {
-  animation: glowUp 1.5s infinite;
-  animation-delay: 4.5s;
-}
-.strength__descriptions p.bold.five {
-  animation: glowUp 1.5s infinite;
-  animation-delay: 6s;
-}
-.strength__descriptions p.bold.one, .strength__descriptions p.bold.two, .strength__descriptions p.bold.three, .strength__descriptions p.bold.four, .strength__descriptions p.bold.five {
-  transition: 0.5s;
-  cursor: pointer;
-  user-select: none;
-}
-.strength__descriptions p.bold.one:hover, .strength__descriptions p.bold.two:hover, .strength__descriptions p.bold.three:hover, .strength__descriptions p.bold.four:hover, .strength__descriptions p.bold.five:hover {
-  color: #626262;
-  transform: scale(1.1);
-  animation: none;
 }
 @keyframes glowUp {
   0%, 100% {
@@ -1145,15 +1173,15 @@ footer ul li a:hover {
 }
 
 .slide__container {
-  padding: 3vw 0px;
+  padding: 4vw 0px 7vw;
   box-sizing: border-box;
-  width: 70%;
+  width: 60%;
   margin: auto;
 }
 @media screen and (max-width: 700px) {
   .slide__container {
     width: 60%;
-    padding: 5vw 0px;
+    padding: 5vw 0px 7vw;
   }
 }
 @media screen and (max-width: 380px) {
@@ -1202,6 +1230,7 @@ footer ul li a:hover {
   text-transform: capitalize;
   font-family: gilroyBold;
   font-size: 1.5em;
+  line-height: 1.6em;
 }
 @media screen and (max-width: 430px) {
   .slide__container .slide__info h4 {
@@ -1212,17 +1241,20 @@ footer ul li a:hover {
   .slide__container .slide__info h4 {
     font-size: 1.1em;
     text-align: center;
+    line-height: 1.2em;
   }
 }
 .slide__container .slide__info p {
   font-family: gilroyRegular;
   letter-spacing: 0.5px;
   font-size: 1.1em;
+  line-height: 1.6em;
 }
 @media screen and (max-width: 380px) {
   .slide__container .slide__info p {
     font-size: 1em;
     text-align: center;
+    line-height: 1.2em;
   }
 }
 
