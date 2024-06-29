@@ -3,6 +3,7 @@ import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import Image from "next/image";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   PrevButton,
   NextButton,
@@ -35,7 +36,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport brand" ref={emblaRef}>
         <div className="embla__container ">
           {slides.map((element, index) => (
-            <div className="embla__slide" key={index}>
+            <motion.div
+              initial={{ scale: .5,opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  ease: "easeOut",
+                  duration: .5,
+                },
+              }}
+              className="embla__slide"
+              key={index}
+            >
               <div className="slide__container">
                 <div className="slide__heading">
                   <div className="slide__img">
@@ -56,7 +69,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   <p>{element.testimonial}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
