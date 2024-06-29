@@ -80,11 +80,13 @@ export function Adventure() {
           >
             <div className="adv__info">
               <h2>{element.heading}</h2>
+
               <h4>{element.subHeading}</h4>
               {element.info}
             </div>
 
             <div className="adv__image">
+              <h2 className="hide">{element.heading}</h2>
               <Image
                 src={"/" + element.img + ".png"}
                 alt="Vercel Logo"
