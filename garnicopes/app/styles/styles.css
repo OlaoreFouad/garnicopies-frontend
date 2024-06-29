@@ -469,6 +469,7 @@ footer ul li a:hover {
   background: black;
   position: relative;
   background-image: linear-gradient(110.12deg, #626262 4.17%, rgba(0, 0, 0, 0) 60.06%, #b5b5b5 97.94%);
+  transition: 0.5s;
   border-radius: 20px;
   overflow: hidden;
   box-sizing: border-box;
@@ -485,6 +486,9 @@ footer ul li a:hover {
   .services__service {
     height: 400px;
   }
+}
+.services__service:hover {
+  transition: 0.5s;
 }
 .services__service .info {
   z-index: 100;
@@ -518,11 +522,12 @@ footer ul li a:hover {
 }
 .services__service .info__details {
   font-family: gilroyRegular;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
-  font-size: 1.4em;
+  font-size: 1.3em;
   letter-spacing: 2px;
   width: 70%;
+  line-height: 1.3em;
 }
 @media screen and (max-width: 800px) {
   .services__service .info__details {
@@ -544,6 +549,7 @@ footer ul li a:hover {
   left: 50%;
   z-index: -10;
   transform: translate(-50%, -50%) rotate(35deg);
+  transition: 1s;
 }
 .services__service::after {
   content: "";
@@ -559,6 +565,7 @@ footer ul li a:hover {
   border-radius: 20px;
   box-sizing: border-box;
   z-index: -10;
+  transition: 0.5s;
 }
 .services__service:nth-child(1)::after {
   background-image: url("/services_bg_1.png"), linear-gradient(90deg, #19171b, #19171b);
@@ -572,26 +579,13 @@ footer ul li a:hover {
 .services__service:nth-child(4)::after {
   background-image: url("/services_bg_4.png"), linear-gradient(90deg, #19171b, #19171b);
 }
-.services__service:hover::before {
-  animation: bgRotate 3s 1;
+.services__service:hover::after {
+  background-image: linear-gradient(90deg, #1fc24d, #1fc24d);
+  background-size: cover;
+  transition: 0.5s;
 }
-@keyframes bgRotate {
-  0% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(35deg);
-  }
-  50% {
-    width: 10%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-  75% {
-    width: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  100% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(35deg);
-  }
+.services__service:hover::before {
+  display: none;
 }
 .services__service .image {
   position: absolute;
