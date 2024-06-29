@@ -21,8 +21,8 @@ export function Header() {
         src="/header__bg.png"
         alt="Vercel Logo"
         className="bgImg"
-        width={150}
-        height={34}
+        width={1000}
+        height={1000}
         priority
       />
       <p className="header__tag">A copywriting agency that just fits.</p>

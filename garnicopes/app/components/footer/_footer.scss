@@ -3,6 +3,31 @@ footer {
   padding: 3vw 10vw;
   text-align: center;
 
+  position: relative;
+  overflow: hidden;
+  
+  .bgImg {
+    position: absolute;
+    top: 50%;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    mix-blend-mode: lighten;
+    animation: anim 4s 1s infinite;
+
+    @keyframes anim {
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(4);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+  }
+
   .footer__img {
     text-align: center;
     display: flex;

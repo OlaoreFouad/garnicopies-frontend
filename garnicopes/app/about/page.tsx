@@ -7,8 +7,8 @@ import Strengths from "./Strengths";
 
 const data: Array<AdventureModel> = [
   {
-    subHeading: "The Quest for Engagement",
-    img: "story1",
+    subHeading: "The Journey to Writing",
+    img: "story2",
     info: (
       <p>
         There&apos;s no second chances. Bad writing will send customers straight
@@ -21,8 +21,8 @@ const data: Array<AdventureModel> = [
     ),
   },
   {
-    subHeading: "The Quest for Engagement",
-    img: "story2",
+    subHeading: "Our Mission",
+    img: "story1",
     reverse: true,
     info: (
       <p>
