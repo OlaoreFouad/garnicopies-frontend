@@ -14,6 +14,9 @@
 }
 
 .initial__header {
+  position: relative;
+  overflow: hidden;
+  // background: red;
   animation: heading 0.8s ease-in-out 1;
   @keyframes heading {
     from {
@@ -33,10 +36,24 @@
 
   .bgImg {
     position: absolute;
-    top: 30%;
+    top: 50%;
+    width: 500px;
+    height: 500px;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -10;
+    z-index: -1;
+    mix-blend-mode: lighten;
+    animation: anim 4s 1s infinite;
+
+    @keyframes anim {
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(4);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
   }
 
   .scrollImg {
@@ -88,7 +105,7 @@
       font-size: 3em;
     }
     @media screen and (max-width: 280px) {
-      font-size: 2em;
+      font-size: 1.9em;
     }
     span {
       color: $green;
@@ -98,6 +115,7 @@
 
 .button__container {
   margin: 40px auto;
+  overflow: hidden;
   @media screen and (max-width: 400px) {
     margin: 15px auto;
   }
@@ -109,18 +127,25 @@
 
   &::before {
     position: absolute;
-    width: 0%;
-    height: 100%;
+    width: 100%;
+    height: 0%;
     content: "";
-    top: 0%;
+    top: -10%;
     left: 0px;
-    background: $green;
+    // background: $green;
+    background-image: url("/button__bg.png"),
+      linear-gradient(0deg, transparent, $green, $green);
+    background-position: bottom center, -40% center;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-size: contain;
+
     transition: 0.4s;
     z-index: -10;
   }
 
   &:hover::before {
-    width: 100%;
+    height: 200%;
   }
 
   .button {
@@ -266,6 +291,16 @@
     transition-delay: 0.2s;
     z-index: 100;
 
+    .green {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $green;
+      top: 0%;
+      left: 0%;
+      z-index: -1;
+      opacity: 0;
+    }
     .info {
       z-index: 100;
       color: white;
@@ -318,7 +353,6 @@
       transform: translate(-50%, -50%) rotate(35deg);
       transition: 1s;
     }
-
     &::after {
       content: "";
       width: calc(100% - 5px); /* Adjust the spacing as needed */
@@ -342,44 +376,49 @@
       }
     }
 
+    &:hover {
+      .green {
+        opacity: 1;
+        transition: 0.8s;
+      }
+    }
     &:hover::after {
-      background-image: linear-gradient(90deg, $green, $green);
-      background-size: cover;
-
+      // background-image: linear-gradient(90deg, $green, $green);
+      // background-size: cover;
+      animation: bgChange 1.8s 1;
       transition: 0.5s;
 
-      // opacity: 0;
+      @keyframes bgChange {
+        0% {
+          background-size: 35%, cover;
+        }
+        100% {
+          background-size: 100%, cover;
+        }
+      }
     }
     &:hover::before {
-      display: none;
-    }
+      animation: bgRotate 3s 1;
 
-    &:hover {
-      // transform: translateY(-3px);
-      // box-shadow: 0px 20px 20px rgba($color: grey, $alpha: 0.2);
+      @keyframes bgRotate {
+        0% {
+          width: 30%;
+          transform: translate(-50%, -50%) rotate(35deg);
+        }
+        50% {
+          width: 10%;
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+        75% {
+          width: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        100% {
+          width: 30%;
+          transform: translate(-50%, -50%) rotate(35deg);
+        }
+      }
     }
-    // &:hover::before {
-    //   animation: bgRotate 3s 1;
-
-    //   @keyframes bgRotate {
-    //     0% {
-    //       width: 30%;
-    //       transform: translate(-50%, -50%) rotate(35deg);
-    //     }
-    //     50% {
-    //       width: 10%;
-    //       transform: translate(-50%, -50%) rotate(360deg);
-    //     }
-    //     75% {
-    //       width: 50%;
-    //       transform: translate(-50%, -50%) rotate(45deg);
-    //     }
-    //     100% {
-    //       width: 30%;
-    //       transform: translate(-50%, -50%) rotate(35deg);
-    //     }
-    //   }
-    // }
 
     .image {
       position: absolute;
@@ -428,7 +467,7 @@
         height: 100%;
         aspect-ratio: inherit;
         object-fit: cover;
-        @media screen and (max-width: 1104px) {
+        @media screen and (min-width: 1104px) {
           object-fit: fill;
         }
       }
@@ -442,7 +481,7 @@
       }
     }
     h2 {
-      font-style: gilroyBold;
+      font-family: gilroyBold;
       font-weight: 700;
       font-size: 4.5em;
 
@@ -453,11 +492,11 @@
         font-size: 3.5em;
       }
       @media screen and (max-width: 400px) {
-        font-size: 3em;
-      }
-      @media screen and (max-width: 302px) {
         font-size: 2.5em;
       }
+      // @media screen and (max-width: 302px) {
+      //   font-size: 2.5em;
+      // }
       margin-top: 0px;
     }
     h4 {
@@ -508,7 +547,7 @@
   text-align: start;
   margin: 15vh auto;
   h2 {
-    font-style: gilroyBold;
+    font-family: gilroyBold;
     font-weight: 700;
     font-size: 3em;
     letter-spacing: 1px;
@@ -527,6 +566,11 @@
       width: 100%;
       font-size: 2em;
     }
+    @media screen and (max-width: 300px) {
+      width: 100%;
+      font-size: 1.8em;
+    }
+
     span {
       text-decoration: line-through;
       color: $green;
@@ -539,6 +583,20 @@
     transition: 0.5s;
     margin: 6vh 0px;
     &:hover {
+      background-image: linear-gradient(
+        120.12deg,
+        $green 0%,
+        rgba(0, 0, 0, 0) 50.06%,
+        $green 97.94%
+      );
+
+      .image {
+        img {
+          transition: 0.5s;
+
+          transform: scale(1.3);
+        }
+      }
       // transform: translateY(-5px);
       // box-shadow: 0px 10px 20px rgba($color: $green, $alpha: 0.3);
     }
@@ -562,6 +620,7 @@
 
     .image {
       overflow: hidden;
+      transition: 0.5s;
       flex: 1;
       border: 5px solid #2d2d2d;
       border-radius: 15px;
@@ -570,6 +629,7 @@
         width: 130%;
         height: 100%;
         object-fit: cover;
+        transition: 0.5s;
       }
     }
     @media screen and (max-width: 800px) {

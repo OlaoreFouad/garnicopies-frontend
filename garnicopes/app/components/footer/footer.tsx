@@ -29,6 +29,14 @@ const paths: Array<Link> = [
 function Footer() {
   return (
     <footer>
+      <Image
+        src="/header__bg.png"
+        alt="Vercel Logo"
+        className="bgImg"
+        width={1000}
+        height={1000}
+        priority
+      />
       <ul>
         {paths.map((element, index) => {
           return (

@@ -60,6 +60,7 @@ export function Services() {
               key={index}
               className="services__service"
             >
+              <div className="green"></div>
               <div className="info">
                 <h3 className="heading">{element.heading}</h3>
                 <p className="info__details">{element.details}</p>
