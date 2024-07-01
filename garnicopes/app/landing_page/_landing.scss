@@ -127,11 +127,12 @@
 
   &::before {
     position: absolute;
-    width: 100%;
+    width: 150%;
     height: 0%;
     content: "";
     top: -10%;
-    left: 0px;
+    left: 50%;
+    transform: translateX(-50%);
     // background: $green;
     background-image: url("/button__bg.png"),
       linear-gradient(0deg, transparent, $green, $green);

@@ -99,13 +99,19 @@
 .sidenav {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0px;
   left: 0px;
-  background: #0d0d0d;
   box-sizing: border-box;
-  padding: 30px;
   z-index: 200;
+}
+.sidenav::before {
+  background: rgba(48, 48, 48, 0.5254901961);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
 }
 .sidenav__links {
   position: relative;
@@ -113,6 +119,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 30px;
 }
 .sidenav__links .top_section {
   position: fixed;
@@ -383,11 +390,12 @@ footer ul li a:hover {
 }
 .button__container::before {
   position: absolute;
-  width: 100%;
+  width: 150%;
   height: 0%;
   content: "";
   top: -10%;
-  left: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   background-image: url("/button__bg.png"), linear-gradient(0deg, transparent, #1fc24d, #1fc24d);
   background-position: bottom center, -40% center;
   background-repeat: no-repeat;
@@ -1950,9 +1958,15 @@ a {
 
 .about__page__header {
   text-align: center;
+  padding-top: 10em;
+}
+@media screen and (max-width: 500px) {
+  .about__page__header {
+    padding-top: 5em;
+  }
 }
 .about__page__header h2 {
-  font-style: gilroyBold;
+  font-family: gilroyBold;
   font-weight: 700;
   font-size: 3em;
 }

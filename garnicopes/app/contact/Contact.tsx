@@ -10,7 +10,7 @@ import React, {
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+const data = ["A project","a question"]
 import Image from "next/image";
 function Contact() {
   const [email, setEmail] = useState<string>("");

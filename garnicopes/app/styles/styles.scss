@@ -29,8 +29,12 @@ a {
 .about__page {
   &__header {
     text-align: center;
+    padding-top: 10em;
+    @media screen and (max-width: 500px) {
+      padding-top: 5em;
+    }
     h2 {
-      font-style: gilroyBold;
+      font-family: gilroyBold;
       font-weight: 700;
       font-size: 3em;
     }
