@@ -9,6 +9,10 @@ import { useState, useEffect } from "react";
 
 const paths = [
   {
+    pathname: "/",
+    label: "home",
+  },
+  {
     pathname: "/about",
     label: "about",
   },
@@ -164,6 +168,7 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
 
         {paths.map((path, index) => (
           <motion.div
+            style={{ marginBottom: "1em" }}
             key={path.pathname}
             custom={index}
             initial="hidden"

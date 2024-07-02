@@ -1,26 +1,24 @@
 "use client";
 import Link from "next/link";
-import React, {
-  ChangeEvent,
-  FormEvent,
-  useState,
-  
-} from "react";
+import React, { ChangeEvent, FormEvent, useState,useEffect } from "react";
 
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
-
 import Image from "next/image";
 function Contact() {
+  const data: Array<string> = ["A project", "a question", "a deal"];
+  let contactLabelIndex = 0;
+
   const [email, setEmail] = useState<string>("");
+  const [contactLabel, setContactLabel] = useState<string>(data[0]);
   const [name, setName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [selectedPurpose, setSelectedPurpose] = useState<string>("");
 
- const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-   setSelectedPurpose(event.target.value);
- };
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedPurpose(event.target.value);
+  };
 
   const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
@@ -36,6 +34,26 @@ function Contact() {
     e.preventDefault();
   };
 
+  // setInterval(() => {
+  //   if (contactLabelIndex >= data.length) {
+  //     contactLabelIndex = 0;
+  //     setContactLabel(() => data[contactLabelIndex]);
+  //   } else {
+  //     setContactLabel(() => data[contactLabelIndex]);
+  //     contactLabelIndex++;
+  //   }
+  // }, 3000);
+
+  useEffect(() => {
+    let contactLabelIndex = 0;
+    const interval = setInterval(() => {
+      contactLabelIndex = (contactLabelIndex + 1) % data.length;
+      setContactLabel(data[contactLabelIndex]);
+    }, 3000);
+
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+  }, []);
+
   // const mailchimpClient = require("@mailchimp/mailchimp_transactional")(
   //   "YOUR_API_KEY"
   // );
@@ -44,7 +62,6 @@ function Contact() {
   //   const response = await mailchimpClient.messages.send({ message: {} });
   //   console.log(response);
   // };
-
 
   return (
     <motion.section
@@ -66,7 +83,7 @@ function Contact() {
 
       <form action="#" className="brand" onSubmit={handleSubmit}>
         <h2>Do you have</h2>
-        <h2 className="green">a question?</h2>
+        <h2 className="green">{contactLabel}?</h2>
         <p>Fill up the form and our team will get back within 24 hours</p>
 
         <div className="inputBox">

@@ -11,7 +11,7 @@ export function Header() {
     <motion.main
     className="initial__header"
       style={{
-        padding: "10em 0px",
+        padding: "11em 0px",
       }}
       // initial={{ y: "100%", opacity: 0 }}
       // whileInView={{ y: 0, opacity: 1 }}
