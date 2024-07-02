@@ -1236,7 +1236,7 @@ footer ul li a:hover {
   }
 }
 .strength__descriptions p.bold.word__anim {
-  animation: glowUp 1.5s infinite;
+  animation: glowUp 2s 1;
   animation-delay: 0s;
 }
 @keyframes glowUp {
