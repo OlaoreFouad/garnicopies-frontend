@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: gilroyLight;
   src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
@@ -987,7 +988,7 @@ footer ul li a:hover {
 }
 @media screen and (max-width: 400px) {
   .portfolio .brand .info .button__container {
-    margin: 10px 0px 2em;
+    margin: 10px 0px 10px;
   }
 }
 .portfolio .brand .info__details {
@@ -1086,6 +1087,11 @@ footer ul li a:hover {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 600px) {
+  .slider .bg__box {
+    display: none;
+  }
 }
 
 .strength {
@@ -1229,6 +1235,10 @@ footer ul li a:hover {
     font-size: 1.5em;
   }
 }
+.strength__descriptions p.bold.word__anim {
+  animation: glowUp 1.5s infinite;
+  animation-delay: 0s;
+}
 @keyframes glowUp {
   0%, 100% {
     color: rgba(255, 255, 255, 0.3019607843);
@@ -1263,14 +1273,14 @@ footer ul li a:hover {
   max-width: 900px;
   width: 90%;
   margin: auto;
-  --slide-height: 19rem;
+  --slide-height: 18rem;
   --slide-spacing: 1rem;
   --slide-size: 100%;
   position: relative;
 }
 @media screen and (max-width: 400px) {
   .embla {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -1972,13 +1982,29 @@ a {
 }
 .about__page__header p {
   font-family: gilroyRegular;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   line-height: 1.4em;
   font-size: 1.1em;
   width: 100%;
-  max-width: 600px;
+  max-width: 750px;
   font-weight: 500;
   margin: 0px auto;
+  font-weight: 100;
+}
+@media screen and (min-width: 968px) {
+  .about__page__header p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 860px) {
+  .about__page__header p {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .about__page__header p {
+    font-size: 1em;
+  }
 }
 .about__page__header p span {
   font-weight: 700;
