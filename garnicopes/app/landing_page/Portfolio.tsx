@@ -81,9 +81,9 @@ export function Portfolio() {
       <div className="brand__container">
         {data.map((element, index) => {
           return (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
               key={index}
               className="brand"
             >
@@ -106,7 +106,7 @@ export function Portfolio() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>

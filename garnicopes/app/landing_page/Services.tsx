@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export interface Service {
   heading: string;
@@ -54,18 +55,20 @@ export function Services() {
       <div className="services__container">
         {services.map((element, index) => {
           return (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+            <div
               key={index}
               className="services__service"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              
+              // style={{ willChange: "opacity, visibility" }}
             >
               <div className="green"></div>
               <div className="info">
                 <h3 className="heading">{element.heading}</h3>
                 <p className="info__details">{element.details}</p>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>

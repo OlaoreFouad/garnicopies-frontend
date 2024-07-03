@@ -525,8 +525,9 @@ footer ul li a:hover {
   font-family: gilroySemiBold;
 }
 .services__service {
+  z-index: 10000;
   cursor: pointer;
-  height: 450px;
+  height: 380px;
   padding: 30px;
   background: black;
   position: relative;
@@ -546,7 +547,7 @@ footer ul li a:hover {
 }
 @media screen and (max-width: 380px) {
   .services__service {
-    height: 400px;
+    height: 300px;
   }
 }
 .services__service:hover {
@@ -598,19 +599,21 @@ footer ul li a:hover {
   font-family: gilroyRegular;
   font-weight: 100;
   font-style: normal;
-  font-size: 1.3em;
+  font-size: 1.2em;
   letter-spacing: 2px;
-  width: 70%;
-  line-height: 1.3em;
+  width: 65%;
+  line-height: 1.4em;
 }
 @media screen and (max-width: 800px) {
   .services__service .info__details {
     width: 90%;
+    font-size: 1.1em;
   }
 }
 @media screen and (max-width: 570px) {
   .services__service .info__details {
-    font-size: 1.2em;
+    width: 100%;
+    font-size: 1.04em;
   }
 }
 .services__service::before {
