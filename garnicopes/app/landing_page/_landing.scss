@@ -262,13 +262,14 @@
   }
 
   &__service {
+    z-index: 10000;
     cursor: pointer;
-    height: 450px;
+    height: 380px;
     @media screen and (max-width: 800px) {
       height: 300px;
     }
     @media screen and (max-width: 380px) {
-      height: 400px;
+      height:300px;
     }
     padding: 30px;
     background: black;
@@ -332,15 +333,17 @@
         font-family: gilroyRegular;
         font-weight: 100;
         font-style: normal;
-        font-size: 1.3em;
+        font-size: 1.2em;
         letter-spacing: 2px;
-        width: 70%;
-        line-height: 1.3em;
+        width: 65%;
+        line-height: 1.4em;
         @media screen and (max-width: 800px) {
           width: 90%;
+          font-size: 1.1em;
         }
         @media screen and (max-width: 570px) {
-          font-size: 1.2em;
+          width: 100%;
+          font-size: 1.04em;
         }
       }
     }
