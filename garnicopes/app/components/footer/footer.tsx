@@ -33,8 +33,8 @@ function Footer() {
         src="/header__bg.png"
         alt="Vercel Logo"
         className="bgImg"
-        width={1000}
-        height={1000}
+        width={500}
+        height={500}
         priority
       />
       <ul>
@@ -50,8 +50,8 @@ function Footer() {
         <Image
           src={"/footer.png"}
           alt="Vercel Logo"
-          width={1500}
-          height={1150}
+          width={500}
+          height={500}
         />
       </div>
     </footer>

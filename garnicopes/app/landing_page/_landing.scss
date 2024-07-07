@@ -16,7 +16,6 @@
 .initial__header {
   position: relative;
   overflow: hidden;
-  // background: red;
   animation: heading 0.8s ease-in-out 1;
   @keyframes heading {
     from {
@@ -133,7 +132,6 @@
     top: -10%;
     left: 50%;
     transform: translateX(-50%);
-    // background: $green;
     background-image: url("/button__bg.png"),
       linear-gradient(0deg, transparent, $green, $green);
     background-position: bottom center, -40% center;
@@ -161,11 +159,6 @@
 
   &:hover .button {
     color: white;
-  }
-
-  &:hover {
-    // transform: translateY(-4px);
-    // box-shadow: 0px 2px 40px rgba($base-grey, 0.8);
   }
 }
 
@@ -269,7 +262,7 @@
       height: 300px;
     }
     @media screen and (max-width: 380px) {
-      height:300px;
+      height: 300px;
     }
     padding: 30px;
     background: black;
@@ -283,7 +276,6 @@
     transition: 0.5s;
     &:hover {
       transition: 0.5s;
-      // background-image: linear-gradient(90deg, $green, $green);
     }
 
     border-radius: 20px;
@@ -400,8 +392,6 @@
       }
     }
     &:hover::after {
-      // background-image: linear-gradient(90deg, $green, $green);
-      // background-size: cover;
       animation: bgChange 1.8s 1;
       transition: 0.5s;
 
@@ -525,9 +515,6 @@
           display: block;
         }
       }
-      // @media screen and (max-width: 302px) {
-      //   font-size: 2.5em;
-      // }
       margin-top: 0px;
     }
     h4 {
@@ -624,12 +611,9 @@
       .image {
         img {
           transition: 0.5s;
-
           transform: scale(1.3);
         }
       }
-      // transform: translateY(-5px);
-      // box-shadow: 0px 10px 20px rgba($color: $green, $alpha: 0.3);
     }
     padding: 15px;
     background: black;
@@ -667,8 +651,6 @@
       flex-direction: column;
 
       .image {
-        // width: 100%;
-        // flex: 1;
         flex: none;
         height: 200px;
       }
@@ -735,7 +717,6 @@
         letter-spacing: 1px;
         @media screen and (max-width: 400px) {
           font-size: 0.95em;
-          // line-height: 1em;
         }
         span {
           color: $green;
@@ -777,7 +758,7 @@
       @keyframes bgRotate {
         0% {
           width: 30%;
-          transform: translate(-50%, -50%) rotate(35deg);
+          transform: translate(-50%, -50%) rotate(30deg);
         }
         50% {
           width: 10%;
@@ -789,7 +770,7 @@
         }
         100% {
           width: 10%;
-          transform: translate(-50%, -50%) rotate(35deg);
+          transform: translate(-50%, -50%) rotate(30deg);
         }
       }
     }
@@ -828,7 +809,48 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @media screen and (max-width: 600px) {
-     display: none; 
+      display: none;
+    }
+  }
+
+  .embla__viewport,
+  .bg__box.brand {
+    transition: 0.5s;
+  }
+
+  .embla__viewport.brand:hover::before {
+    animation: bgRotate 3s 1;
+    @keyframes bgRotate {
+      0% {
+        width: 30%;
+        transform: translate(-50%, -50%) rotate(30deg);
+      }
+      50% {
+        width: 10%;
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+      75% {
+        width: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      100% {
+        width: 10%;
+        transform: translate(-50%, -50%) rotate(30deg);
+      }
+    }
+  }
+
+  &:hover {
+    .embla__viewport,
+    .bg__box.brand {
+      transition: 0.5s;
+
+      background-image: linear-gradient(
+        120.12deg,
+        $green 0%,
+        rgba(0, 0, 0, 0) 50.06%,
+        $green 97.94%
+      );
     }
   }
 }
@@ -896,7 +918,6 @@
       cursor: pointer;
       user-select: none;
       &:hover {
-        // color: #626262;
         color: $green;
 
         transform: scale(1.1);
@@ -936,39 +957,7 @@
           animation: glowUp 2s 1;
           animation-delay: 0s;
         }
-        // &.two {
-        //   animation: glowUp 1.5s infinite;
-        //   animation-delay: 1.5s;
-        // }
-        // &.three {
-        //   animation: glowUp 1.5s infinite;
-        //   animation-delay: 3s;
-        // }
-        // &.four {
-        //   animation: glowUp 1.5s infinite;
-        //   animation-delay: 4.5s;
-        // }
-        // &.five {
-        //   animation: glowUp 1.5s infinite;
-        //   animation-delay: 6s;
-        // }
 
-        // &.one,
-        // &.two,
-        // &.three,
-        // &.four,
-        // &.five {
-        //   transition: 0.5s;
-        //   cursor: pointer;
-        //   user-select: none;
-        //   &:hover {
-        //     // color: #626262;
-        //     color: $green;
-
-        //     transform: scale(1.1);
-        //     animation: none;
-        //   }
-        // }
         @keyframes glowUp {
           0%,
           100% {
@@ -980,7 +969,6 @@
           }
         }
       }
-      // display: inline;
     }
   }
 }
