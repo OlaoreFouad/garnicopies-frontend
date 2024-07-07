@@ -420,6 +420,7 @@ footer ul li a:hover {
 .button__container:hover .button {
   color: white;
 }
+
 .services {
   margin: 20vh 0px;
   text-align: start;
@@ -1044,7 +1045,7 @@ footer ul li a:hover {
 @keyframes bgRotate {
   0% {
     width: 30%;
-    transform: translate(-50%, -50%) rotate(35deg);
+    transform: translate(-50%, -50%) rotate(30deg);
   }
   50% {
     width: 10%;
@@ -1056,7 +1057,7 @@ footer ul li a:hover {
   }
   100% {
     width: 10%;
-    transform: translate(-50%, -50%) rotate(35deg);
+    transform: translate(-50%, -50%) rotate(30deg);
   }
 }
 
@@ -1095,6 +1096,36 @@ footer ul li a:hover {
   .slider .bg__box {
     display: none;
   }
+}
+.slider .embla__viewport,
+.slider .bg__box.brand {
+  transition: 0.5s;
+}
+.slider .embla__viewport.brand:hover::before {
+  animation: bgRotate 3s 1;
+}
+@keyframes bgRotate {
+  0% {
+    width: 30%;
+    transform: translate(-50%, -50%) rotate(30deg);
+  }
+  50% {
+    width: 10%;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  75% {
+    width: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    width: 10%;
+    transform: translate(-50%, -50%) rotate(30deg);
+  }
+}
+.slider:hover .embla__viewport,
+.slider:hover .bg__box.brand {
+  transition: 0.5s;
+  background-image: linear-gradient(120.12deg, #1fc24d 0%, rgba(0, 0, 0, 0) 50.06%, #1fc24d 97.94%);
 }
 
 .strength {
