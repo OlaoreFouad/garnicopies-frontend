@@ -91,8 +91,8 @@ export function Portfolio() {
                 <Image
                   src={"/" + element.img + ".png"}
                   alt="Company Logo"
-                  width={1000}
-                  height={1000}
+                  width={500}
+                  height={500}
                 />
               </div>
               <div className="info">

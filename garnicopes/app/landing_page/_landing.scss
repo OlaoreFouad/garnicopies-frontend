@@ -2,21 +2,28 @@
 
 .section__tag {
   font-family: gilroyRegular;
-  font-size: 1.2em;
+  font-size: $text--normal;
   color: #ffffff;
+  font-weight: 400;
 
   @media screen and (max-width: 600px) {
-    font-size: 1.1em;
+    font-size: $text--sm;
   }
-  @media screen and (max-width: 310px) {
-    font-size: 0.9em;
-  }
+  // @media screen and (max-width: 310px) {
+  //   font-size: 0.9em;
+  // }
 }
 
 .initial__header {
   position: relative;
   overflow: hidden;
-  animation: heading 0.8s ease-in-out 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  // animation: heading 0.8s ease-in-out 1;
   @keyframes heading {
     from {
       opacity: 0;
@@ -85,26 +92,13 @@
   }
   &__heading {
     font-family: gilroyBold;
-    font-size: 4em;
+    font-size: $header--lg;
     margin: 20px auto;
     width: 90%;
 
     line-height: 1.1em;
-    @media screen and (min-width: 999px) {
-      font-size: 5em;
-    }
-
     @media screen and (max-width: 570px) {
-      font-size: 3.5em;
-    }
-    @media screen and (max-width: 530px) {
-      font-size: 3.2em;
-    }
-    @media screen and (max-width: 380px) {
-      font-size: 3em;
-    }
-    @media screen and (max-width: 280px) {
-      font-size: 1.9em;
+      font-size: $header--sm;
     }
     span {
       color: $green;

@@ -9,10 +9,7 @@ export function Header() {
   return (
     ///@todo : fix this
     <motion.main
-    className="initial__header"
-      style={{
-        padding: "11em 0px",
-      }}
+      className="initial__header"
       // initial={{ y: "100%", opacity: 0 }}
       // whileInView={{ y: 0, opacity: 1 }}
       // transition={{ duration: 1, ease: "easeInOut" }}
@@ -21,13 +18,13 @@ export function Header() {
         src="/header__bg.png"
         alt="Vercel Logo"
         className="bgImg"
-        width={1000}
-        height={1000}
+        width={500}
+        height={500}
         priority
       />
       <p className="header__tag">A copywriting agency that just fits.</p>
       <h1 className="header__heading">
-        Organic <span>Content</span> , Organic <span>Conversions</span>
+        Organic <span>Content</span>, Organic <span>Conversions</span>
       </h1>
       <div className="button__container">
         <Link href={"/"} className="button">

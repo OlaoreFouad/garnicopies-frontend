@@ -63,9 +63,9 @@ export function Testimonials() {
         <Image
           src={"/star.png"}
           alt="Company Logo"
-          width={1000}
+          width={500}
           className="star"
-          height={1000}
+          height={500}
 
           // objectFit="cover"
         />
