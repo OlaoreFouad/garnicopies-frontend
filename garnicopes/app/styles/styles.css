@@ -141,12 +141,76 @@
   }
 }
 
+@font-face {
+  font-family: gilroyLight;
+  src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyRegular;
+  src: url("/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyMedium;
+  src: url("/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroySemiBold;
+  src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
+}
 footer {
   background: rgba(255, 255, 255, 0.0509803922);
   padding: 3vw 10vw;
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+footer .footer__heading {
+  font-family: gilroyBold;
+  font-size: 1.5rem;
+  line-height: 1.1em;
+}
+@media screen and (max-width: 400px) {
+  footer .footer__heading {
+    font-size: 0.875rem;
+  }
+}
+footer .footer__heading span {
+  color: #1fc24d;
+  display: inline-block;
+  margin: 0px 1px;
+}
+footer .footer__heading span:nth-child(2) {
+  transform: rotate(-10deg);
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+footer .footer__heading span:nth-child(3) {
+  transform: rotate(10deg);
+}
+footer .footer__heading span:nth-child(4) {
+  transform: rotate(-10deg);
+}
+footer .footer__heading span:nth-child(5) {
+  transform: rotate(-10deg);
+}
+footer .footer__heading span:nth-child(6) {
+  transform: rotate(10deg);
+}
+footer .footer__heading span:nth-child(7) {
+  transform: rotate(10deg);
 }
 footer .bgImg {
   position: absolute;
@@ -171,6 +235,7 @@ footer .footer__img {
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin: 50px auto;
 }
@@ -676,24 +741,16 @@ footer ul li a:hover {
   }
 }
 .services__service:hover::before {
-  animation: bgRotate 3s 1;
+  animation: bgRotate 2s 1;
 }
 @keyframes bgRotate {
   0% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(35deg);
-  }
-  50% {
     width: 10%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-  75% {
-    width: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(30deg);
   }
   100% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(35deg);
+    width: 10%;
+    transform: translate(-50%, -50%) rotate(200deg);
   }
 }
 .services__service .image {
@@ -761,7 +818,7 @@ footer ul li a:hover {
   aspect-ratio: inherit;
   object-fit: cover;
 }
-@media screen and (min-width: 1104px) {
+@media screen and (min-width: 900px) {
   .adventure .adv__image img {
     object-fit: contain;
   }
@@ -842,35 +899,38 @@ footer ul li a:hover {
 .portfolio h2 {
   font-family: gilroyBold;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 4.5rem;
   letter-spacing: 1px;
-  width: 40%;
+  width: 60%;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
+  .portfolio h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1150px) {
   .portfolio h2 {
     width: 70%;
   }
 }
-@media screen and (max-width: 800px) {
-  .portfolio h2 {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 920px) {
   .portfolio h2 {
     width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .portfolio h2 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .portfolio h2 {
+    width: 75%;
   }
 }
 @media screen and (max-width: 400px) {
   .portfolio h2 {
-    width: 100%;
-    font-size: 2em;
-  }
-}
-@media screen and (max-width: 300px) {
-  .portfolio h2 {
-    width: 100%;
-    font-size: 1.8em;
+    width: 95%;
   }
 }
 .portfolio h2 span {
@@ -895,7 +955,7 @@ footer ul li a:hover {
   gap: 30px;
 }
 .portfolio .brand:hover {
-  background-image: linear-gradient(120.12deg, #1fc24d 0%, rgba(0, 0, 0, 0) 50.06%, #1fc24d 97.94%);
+  background-image: linear-gradient(120.12deg, #1fc24d 0%, rgba(0, 0, 0, 0) 50.06%, #1fc24d 90.94%);
 }
 .portfolio .brand:hover .image img {
   transition: 0.5s;
@@ -949,32 +1009,55 @@ footer ul li a:hover {
 .portfolio .brand .info .tag {
   font-family: gilroyRegular;
   font-weight: 400;
+  font-size: 1rem;
+}
+@media screen and (max-width: 400px) {
+  .portfolio .brand .info .tag {
+    font-size: 0.75rem;
+    margin: 0px;
+  }
 }
 .portfolio .brand .info .brand__name {
   font-family: gilroyBold;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 5px;
+  margin-top: 20px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .portfolio .brand .info .brand__name {
     margin: 0px;
     margin-bottom: 5px;
+    margin-top: 15px;
+    font-size: 1.125rem;
   }
 }
 .portfolio .brand .info .industry {
   font-family: gilroyRegular;
   font-weight: 400;
   text-transform: capitalize;
+  line-height: 1.875rem;
   margin: 0px;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 600px) {
+  .portfolio .brand .info .industry {
+    font-size: 0.875rem;
+    line-height: 21px;
+  }
 }
 .portfolio .brand .info .button__container {
-  margin: 3em 0px;
+  margin: 20px 0px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .portfolio .brand .info .button__container {
+    padding: 14px 0px;
     margin: 10px 0px 10px;
+  }
+  .portfolio .brand .info .button__container .button {
+    font-size: 0.875rem;
+    padding: 14px 68px;
   }
 }
 .portfolio .brand .info__details {
@@ -982,12 +1065,13 @@ footer ul li a:hover {
   font-weight: 400;
   font-style: normal;
   line-height: 1.4em;
-  font-size: 1.1em;
+  font-size: 1.25rem;
   letter-spacing: 1px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .portfolio .brand .info__details {
-    font-size: 0.95em;
+    font-size: 0.875rem;
+    line-height: 21px;
   }
 }
 .portfolio .brand .info__details span {
@@ -1004,6 +1088,17 @@ footer ul li a:hover {
   left: 50%;
   z-index: -10;
   transform: translate(-50%, -50%) rotate(30deg);
+  animation: bgRotateOut 2s 1;
+}
+@keyframes bgRotateOut {
+  0% {
+    width: 10%;
+    transform: translate(-50%, -50%) rotate(210deg);
+  }
+  100% {
+    width: 10%;
+    transform: translate(-50%, -50%) rotate(30deg);
+  }
 }
 .portfolio .brand::after {
   content: "";
@@ -1022,24 +1117,29 @@ footer ul li a:hover {
   z-index: -10;
 }
 .portfolio .brand:hover::before {
-  animation: bgRotate 3s 1;
+  animation: bgRotate 2s 1;
 }
 @keyframes bgRotate {
   0% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(30deg);
-  }
-  50% {
     width: 10%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-  75% {
-    width: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(30deg);
   }
   100% {
     width: 10%;
-    transform: translate(-50%, -50%) rotate(30deg);
+    transform: translate(-50%, -50%) rotate(200deg);
+  }
+}
+.portfolio .button__container {
+  margin: 20px 0px;
+}
+@media screen and (max-width: 600px) {
+  .portfolio .button__container {
+    padding: 14px 0px;
+    margin: 10px 0px 10px;
+  }
+  .portfolio .button__container .button {
+    font-size: 0.875rem;
+    padding: 14px 68px;
   }
 }
 
@@ -1058,8 +1158,14 @@ footer ul li a:hover {
 .testimonial__header {
   text-align: center;
   font-family: gilroyBold;
-  font-size: 2.5em;
+  font-size: 4.5rem;
   font-weight: 600;
+  margin-top: 24px;
+}
+@media screen and (max-width: 600px) {
+  .testimonial__header {
+    font-size: 1.5rem;
+  }
 }
 
 .slider {
@@ -1067,7 +1173,7 @@ footer ul li a:hover {
   text-align: start;
 }
 .slider .bg__box {
-  width: 100%;
+  width: 80%;
   height: 70%;
   position: absolute;
   top: 40%;
@@ -1082,27 +1188,6 @@ footer ul li a:hover {
 .slider .embla__viewport,
 .slider .bg__box.brand {
   transition: 0.5s;
-}
-.slider .embla__viewport.brand:hover::before {
-  animation: bgRotate 3s 1;
-}
-@keyframes bgRotate {
-  0% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(30deg);
-  }
-  50% {
-    width: 10%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-  75% {
-    width: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  100% {
-    width: 10%;
-    transform: translate(-50%, -50%) rotate(30deg);
-  }
 }
 .slider:hover .embla__viewport,
 .slider:hover .bg__box.brand {
@@ -1204,7 +1289,7 @@ footer ul li a:hover {
   animation: none;
 }
 .strength__descriptions p.bold {
-  font-size: 7em;
+  font-size: 8rem;
 }
 @media screen and (max-width: 1320px) {
   .strength__descriptions p.bold {
@@ -1286,7 +1371,7 @@ footer ul li a:hover {
   src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
 }
 .embla {
-  max-width: 900px;
+  max-width: 800px;
   width: 90%;
   margin: auto;
   --slide-height: 18rem;
@@ -1337,29 +1422,24 @@ footer ul li a:hover {
 }
 @media screen and (max-width: 700px) {
   .slide__container {
-    width: 60%;
+    width: 65%;
     padding: 5vw 0px 7vw;
   }
 }
 @media screen and (max-width: 380px) {
   .slide__container {
-    width: 80%;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .slide__container {
+    width: 65%;
   }
 }
 .slide__container .slide__heading {
   display: flex;
   align-items: center;
   gap: 1em;
-}
-@media screen and (max-width: 420px) {
-  .slide__container .slide__heading {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 400px) {
-  .slide__container .slide__heading {
-    text-align: center;
-  }
 }
 .slide__container .slide__heading .slide__img {
   height: 70px;
@@ -1368,6 +1448,12 @@ footer ul li a:hover {
 .slide__container .slide__heading .slide__img img {
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 600px) {
+  .slide__container .slide__heading .slide__img {
+    width: 25px;
+    height: 25px;
+  }
 }
 .slide__container .slide__heading .heading__info {
   display: flex;
@@ -1379,9 +1465,17 @@ footer ul li a:hover {
 }
 .slide__container .slide__heading .heading__info h3 {
   margin: 0px;
+  font-size: 1em;
 }
 .slide__container .slide__heading .heading__info p {
   margin: 0px;
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 600px) {
+  .slide__container .slide__heading .heading__info h3,
+  .slide__container .slide__heading .heading__info p {
+    font-size: 12px;
+  }
 }
 .slide__container .slide__info h4 {
   text-transform: capitalize;
@@ -1389,16 +1483,15 @@ footer ul li a:hover {
   font-size: 1.5em;
   line-height: 1.6em;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 600px) {
   .slide__container .slide__info h4 {
-    font-size: 1.2em;
+    font-size: 0.875rem;
+    line-height: 1.13em;
   }
 }
 @media screen and (max-width: 380px) {
   .slide__container .slide__info h4 {
-    font-size: 1.1em;
-    text-align: center;
-    line-height: 1.2em;
+    line-height: 1.14em;
   }
 }
 .slide__container .slide__info p {
@@ -1407,11 +1500,10 @@ footer ul li a:hover {
   font-size: 1.1em;
   line-height: 1.6em;
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 600px) {
   .slide__container .slide__info p {
-    font-size: 1em;
-    text-align: center;
-    line-height: 1.2em;
+    font-size: 0.875rem;
+    line-height: 21px;
   }
 }
 
@@ -1652,9 +1744,9 @@ footer ul li a:hover {
   z-index: 100;
   gap: 30px;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
   .contact .brand {
-    padding: 20px;
+    padding: 30px 20px;
   }
 }
 .contact .brand::before {
@@ -1684,23 +1776,8 @@ footer ul li a:hover {
   box-sizing: border-box;
   z-index: -10;
 }
-@keyframes bgRotate {
-  0% {
-    width: 30%;
-    transform: translate(-50%, -50%) rotate(35deg);
-  }
-  50% {
-    width: 10%;
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-  75% {
-    width: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  100% {
-    width: 10%;
-    transform: translate(-50%, -50%) rotate(35deg);
-  }
+.contact .brand:hover::before {
+  animation: none;
 }
 .contact .brand h2,
 .contact .brand p {
@@ -1708,18 +1785,13 @@ footer ul li a:hover {
 }
 .contact .brand h2 {
   font-family: gilroyBold;
-  font-size: 3.5em;
+  font-size: 3.375rem;
   margin: 0px;
   text-transform: capitalize;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .contact .brand h2 {
-    font-size: 3em;
-  }
-}
-@media screen and (max-width: 350px) {
-  .contact .brand h2 {
-    font-size: 2.5em;
+    font-size: 2.05rem;
   }
 }
 .contact .brand h2:nth-child(2) {
@@ -1728,9 +1800,14 @@ footer ul li a:hover {
 .contact .brand p {
   font-family: gilroyRegular;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1.25rem;
   line-height: 1.6em;
-  margin: 30px auto;
+  margin: 20px auto;
+}
+@media screen and (max-width: 600px) {
+  .contact .brand p {
+    font-size: 0.875rem;
+  }
 }
 .contact .brand .inputBox {
   font-family: gilroyRegular;
@@ -1738,6 +1815,12 @@ footer ul li a:hover {
   color: white;
   position: relative;
   margin: 30px auto;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 600px) {
+  .contact .brand .inputBox {
+    font-size: 0.875rem;
+  }
 }
 .contact .brand .inputBox label {
   position: absolute;
@@ -1752,7 +1835,7 @@ footer ul li a:hover {
   color: white;
   font-family: gilroyRegular;
   font-weight: 400;
-  font-size: 1.09em;
+  font-size: 1.25rem;
   width: 100%;
   box-sizing: border-box;
   padding: 5px 10px;
@@ -1760,6 +1843,11 @@ footer ul li a:hover {
   margin: 0px;
   color: white;
   border-bottom: 2px solid rgba(31, 194, 77, 0.3019607843);
+}
+@media screen and (max-width: 600px) {
+  .contact .brand .inputBox select {
+    font-size: 0.875rem;
+  }
 }
 .contact .brand .inputBox select:focus + label {
   transform: scale(0.7) translate(-25%, -130%);
@@ -1805,10 +1893,15 @@ footer ul li a:hover {
   border: none;
   outline: none;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.25rem;
   background: #1fc24d;
   border-radius: 10px;
   cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .contact .brand button {
+    font-size: 0.875rem;
+  }
 }
 .contact .brand .socials {
   margin: 0px auto;
@@ -1964,6 +2057,26 @@ footer ul li a:hover {
   }
 }
 
+@font-face {
+  font-family: gilroyLight;
+  src: url("/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyRegular;
+  src: url("/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyMedium;
+  src: url("/gilroy/Gilroy-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroyBold;
+  src: url("/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: gilroySemiBold;
+  src: url("/gilroy/Gilroy-SemiBold.ttf") format("truetype");
+}
 .container {
   max-width: 1400px;
   width: 95%;
@@ -1994,32 +2107,30 @@ a {
 .about__page__header h2 {
   font-family: gilroyBold;
   font-weight: 700;
-  font-size: 3em;
+  margin: 10px auto;
+  font-size: 4.5rem;
+}
+@media screen and (max-width: 600px) {
+  .about__page__header h2 {
+    font-size: 2rem;
+  }
 }
 .about__page__header p {
   font-family: gilroyRegular;
   letter-spacing: 1.2px;
   line-height: 1.4em;
-  font-size: 1.1em;
+  font-size: 1.5rem;
+  opacity: 0.8;
   width: 100%;
   max-width: 750px;
   font-weight: 500;
   margin: 0px auto;
   font-weight: 100;
 }
-@media screen and (min-width: 968px) {
+@media screen and (max-width: 600px) {
   .about__page__header p {
-    font-size: 1.2em;
-  }
-}
-@media screen and (max-width: 860px) {
-  .about__page__header p {
-    font-size: 1.1em;
-  }
-}
-@media screen and (max-width: 500px) {
-  .about__page__header p {
-    font-size: 1em;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 .about__page__header p span {
