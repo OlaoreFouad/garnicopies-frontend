@@ -22,17 +22,18 @@ export function Header() {
         height={500}
         priority
       />
-      <p className="header__tag">A copywriting agency that just fits.</p>
-      <h1 className="header__heading">
-        Organic <span>Content</span>, Organic <span>Conversions</span>
-      </h1>
-      <div className="button__container">
-        <Link href={"/"} className="button">
-          Let&apos;s Talk
-        </Link>
+      <div className="header__container">
+        <p className="header__tag">A copywriting agency that just fits.</p>
+        <h1 className="header__heading">
+          Organic <span>Content</span>, Organic <span>Conversions</span>
+        </h1>
+        <div className="button__container">
+          <Link href={"/"} className="button">
+            Let&apos;s Talk
+          </Link>
+        </div>
       </div>
-
-      <Link href={"#services"}>
+      <Link href={"#services"} className="scrollBtn">
         <Image
           src="/scroll.png"
           alt="Vercel Logo"

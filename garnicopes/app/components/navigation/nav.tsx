@@ -159,8 +159,8 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
             <Image
               src="/close.png"
               alt="close button"
-              width={34}
-              height={34}
+              width={35}
+              height={45}
               priority
             />
           </div>
