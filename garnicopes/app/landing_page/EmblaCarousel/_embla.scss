@@ -1,7 +1,7 @@
 @import "../../styles/base";
 
 .embla {
-  max-width: 900px;
+  max-width: 800px;
   width: 90%;
 
   @media screen and (max-width: 400px) {
@@ -16,8 +16,6 @@
 .embla__viewport {
   overflow: hidden;
   margin-bottom: 40px;
-
- 
 }
 .embla__container {
   backface-visibility: hidden;
@@ -47,33 +45,32 @@
   margin: auto;
 
   @media screen and (max-width: 700px) {
-    width: 60%;
+    width: 65%;
     padding: 5vw 0px 7vw;
   }
 
   @media screen and (max-width: 380px) {
-    width: 80%;
+    width: 75%;
+  }
+  @media screen and (max-width: 300px) {
+    width: 65%;
   }
 
   .slide__heading {
     display: flex;
     align-items: center;
     gap: 1em;
-
-    @media screen and (max-width: 420px) {
-      flex-direction: column;
-    }
-
-    @media screen and (max-width: 400px) {
-      text-align: center;
-    }
-
     .slide__img {
       height: 70px;
       width: 70px;
       img {
         width: 100%;
         height: 100%;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 25px;
+        height: 25px;
       }
     }
 
@@ -86,9 +83,17 @@
       gap: 0.3em;
       h3 {
         margin: 0px;
+        font-size: 1em;
       }
       p {
         margin: 0px;
+        font-size: $text--xs;
+      }
+      @media screen and (max-width: 600px) {
+        h3,
+        p {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -100,13 +105,12 @@
       font-size: 1.5em;
       line-height: 1.6em;
 
-      @media screen and (max-width: 430px) {
-        font-size: 1.2em;
+      @media screen and (max-width: 600px) {
+        font-size: $text--xs;
+        line-height: 1.13em;
       }
       @media screen and (max-width: 380px) {
-        font-size: 1.1em;
-        text-align: center;
-        line-height: 1.2em;
+        line-height: 1.14em;
       }
     }
     p {
@@ -115,10 +119,9 @@
       font-size: 1.1em;
       line-height: 1.6em;
 
-      @media screen and (max-width: 380px) {
-        font-size: 1em;
-        text-align: center;
-        line-height: 1.2em;
+      @media screen and (max-width: 600px) {
+        font-size: $text--xs;
+        line-height: 21px;
       }
     }
   }
@@ -179,12 +182,7 @@
     transform: none !important;
     box-shadow: none !important;
   }
-  // border-image-source: linear-gradient(
-  //   110.12deg,
-  //   #bebebe 4.17%,
-  //   rgba(0, 0, 0, 0) 51.06%,
-  //   #b5b5b5 97.94%
-  // );
+
 }
 @media screen and (max-width: 420px) {
   .embla__button.brand {
@@ -213,15 +211,12 @@
   align-items: center;
   margin: 0px;
   margin-bottom: 30px;
-
-  // margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
   gap: 5px;
 }
 .embla__dot {
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
   appearance: none;
-  // background-color: blue;
   background: rgba(145, 145, 145, 0.692);
   touch-action: manipulation;
   display: inline-flex;
@@ -239,7 +234,6 @@
 }
 .embla__dot:after {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  // background: rgba(0, 0, 0, 0.76);
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -248,7 +242,6 @@
   content: "";
 }
 .embla__dot--selected:after {
-  // box-shadow: inset 0 0 0 0.2rem rgba(94, 93, 93, 0.486);
   background: $green;
 }
 

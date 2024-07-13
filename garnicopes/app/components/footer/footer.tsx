@@ -47,12 +47,18 @@ function Footer() {
         })}
       </ul>
       <div className="footer__img">
-        <Image
-          src={"/footer.png"}
-          alt="Vercel Logo"
-          width={500}
-          height={500}
-        />
+        <Image src={"/logo.png"} alt="Vercel Logo" width={500} height={500} />
+
+        <h2 className="footer__heading">
+          COPIES WITH A <span>F</span>
+          <span>E</span>
+          <span>E</span>
+          <span>L</span>
+          <span>I</span>
+          <span>N</span>
+          <span>G</span>
+          <span>!</span>
+        </h2>
       </div>
     </footer>
   );
