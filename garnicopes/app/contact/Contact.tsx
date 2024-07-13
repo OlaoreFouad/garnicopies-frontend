@@ -74,8 +74,8 @@ function Contact() {
           <Image
             key={i}
             src={"/ask.png"}
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             alt="ask"
           />
         ))}

@@ -90,7 +90,7 @@ export function Adventure() {
               <Image
                 src={"/" + element.img + ".png"}
                 alt="Vercel Logo"
-                width={1000}
+                width={500}
                 height={34}
                 priority
               />

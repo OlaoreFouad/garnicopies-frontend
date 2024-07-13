@@ -46,8 +46,8 @@ const DesktopNav = () => {
           src="/logo.png"
           alt="Vercel Logo"
           className="nav__logo"
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
           priority
         />
       </Link>
@@ -159,8 +159,8 @@ const SideNav: React.FC<NavProp> = ({ isOpen, setIsOpen }) => {
             <Image
               src="/close.png"
               alt="close button"
-              width={34}
-              height={34}
+              width={35}
+              height={45}
               priority
             />
           </div>
