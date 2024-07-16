@@ -29,9 +29,6 @@
     width: 200px !important;
     height: auto !important;
   }
-
-  &__container {
-  }
   .nav__resp {
     @media screen and (max-width: 768px) {
       display: none;
@@ -40,6 +37,7 @@
   &__nav_link {
     text-transform: uppercase;
     margin-left: 20px;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 0.07em;
     color: rgba(255, 255, 255, 0.466);
@@ -68,7 +66,6 @@
   height: 100vh;
   top: 0px;
   left: 0px;
-  // background: #0d0d0d;
   box-sizing: border-box;
   z-index: 200;
 
@@ -89,12 +86,9 @@
     justify-content: center;
     padding: 30px;
 
-    // align-items: center;
-
     .top_section {
       position: fixed;
       top: 20px;
-      // right: 20px;
       display: flex;
       width: calc(100% - 60px);
       justify-content: space-between;
@@ -103,13 +97,8 @@
 
     .nav__nav_link {
       text-align: start;
-      font-size: 3.4em;
+      font-size: $nav--sm;
       margin: 0px;
-
-      @media screen and (max-width: 400px) {
-        font-size: 2.5em;
-      }
-      // margin: 0px;
     }
   }
 }

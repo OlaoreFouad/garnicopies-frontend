@@ -12,8 +12,8 @@ export interface AdventureModel {
 }
 const data: Array<AdventureModel> = [
   {
-    heading: "Turning Clicks into Cheers",
-    // subHeading: "The Quest for Engagement",
+    // heading: "Turning Clicks into Cheers",
+    subHeading: "The Problem",
     img: "smile",
     info: (
       <p>
@@ -64,7 +64,11 @@ const data: Array<AdventureModel> = [
 export function Adventure() {
   return (
     <section className="adventure">
-      <p className=" section__tag">The Copywriting Adventure</p>
+      <div className="section__top">
+        <p className=" section__tag">The Copywriting Adventure</p>
+        <h2>Turning Clicks into Cheers</h2>
+      </div>
+
       {data.map((element, index) => {
         return (
           <motion.div

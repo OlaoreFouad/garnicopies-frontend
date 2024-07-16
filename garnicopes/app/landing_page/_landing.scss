@@ -435,6 +435,23 @@
     margin: 1vh auto;
   }
 
+  .section__top{
+    text-align: center;
+  }
+
+  h2 {
+    font-family: gilroyBold;
+    font-weight: 700;
+    font-size: $header--lg;
+    @media screen and (max-width: 800px) {
+      font-size: $header--sm;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: $section--header-md;
+    }
+    margin-top: 0px;
+  }
+
   .adv {
     display: flex;
     justify-content: space-between;
@@ -489,9 +506,6 @@
       }
     }
     h2 {
-      font-family: gilroyBold;
-      font-weight: 700;
-      font-size: $header--lg;
       @media screen and (max-width: 600px) {
         &.hide {
           font-size: $section--header-md;
@@ -504,7 +518,6 @@
           display: block;
         }
       }
-      margin-top: 0px;
     }
     h4 {
       font-family: gilroySemiBold;
@@ -591,9 +604,7 @@
       background-image: linear-gradient(
         120.12deg,
         $green 0%,
-        // white 40%,
         rgba(0, 0, 0, 0) 50.06%,
-        // white 60%,
         $green 90.94%
       );
 
@@ -843,28 +854,6 @@
   .bg__box.brand {
     transition: 0.5s;
   }
-
-  // .embla__viewport.brand:hover::before {
-  //   // animation: bgRotate 3s 1;
-  //   @keyframes bgRotate {
-  //     0% {
-  //       width: 30%;
-  //       transform: translate(-50%, -50%) rotate(30deg);
-  //     }
-  //     50% {
-  //       width: 10%;
-  //       transform: translate(-50%, -50%) rotate(360deg);
-  //     }
-  //     75% {
-  //       width: 50%;
-  //       transform: translate(-50%, -50%) rotate(45deg);
-  //     }
-  //     100% {
-  //       width: 10%;
-  //       transform: translate(-50%, -50%) rotate(30deg);
-  //     }
-  //   }
-  // }
 
   &:hover {
     .embla__viewport,

@@ -76,6 +76,7 @@
 .nav__nav_link {
   text-transform: uppercase;
   margin-left: 20px;
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.07em;
   color: rgba(255, 255, 255, 0.466);
@@ -132,13 +133,8 @@
 }
 .sidenav__links .nav__nav_link {
   text-align: start;
-  font-size: 3.4em;
+  font-size: 3rem;
   margin: 0px;
-}
-@media screen and (max-width: 400px) {
-  .sidenav__links .nav__nav_link {
-    font-size: 2.5em;
-  }
 }
 
 @font-face {
@@ -238,6 +234,7 @@ footer .footer__img {
   flex-direction: column;
   align-items: center;
   margin: 50px auto;
+  margin-bottom: 0px;
 }
 footer .footer__img img {
   width: 30%;
@@ -257,22 +254,6 @@ footer ul {
   margin-bottom: 3vw;
   padding: 0px;
 }
-@media screen and (max-width: 768px) {
-  footer ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 400px) {
-  footer ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
-  }
-}
 footer ul li {
   list-style-type: none;
   display: inline;
@@ -280,18 +261,16 @@ footer ul li {
   font-weight: 500;
   font-family: gilroyBold;
 }
-@media screen and (max-width: 768px) {
-  footer ul li {
-    display: block;
-    margin: 0px auto;
-    text-align: center;
-  }
-}
 footer ul li a {
   color: rgba(255, 255, 255, 0.466);
-  font-size: 1.5em;
+  font-size: 1rem;
   text-transform: uppercase;
   transition: 0.5s;
+}
+@media screen and (max-width: 400px) {
+  footer ul li a {
+    font-size: 0.75rem;
+  }
 }
 footer ul li a:hover {
   color: rgba(255, 255, 255, 0.89);
@@ -770,6 +749,25 @@ footer ul li a:hover {
     margin: 1vh auto;
   }
 }
+.adventure .section__top {
+  text-align: center;
+}
+.adventure h2 {
+  font-family: gilroyBold;
+  font-weight: 700;
+  font-size: 4.5rem;
+  margin-top: 0px;
+}
+@media screen and (max-width: 800px) {
+  .adventure h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .adventure h2 {
+    font-size: 2rem;
+  }
+}
 .adventure .adv {
   display: flex;
   justify-content: space-between;
@@ -830,12 +828,6 @@ footer ul li a:hover {
   .adventure .adv__info, .adventure .adv__image {
     width: 100%;
   }
-}
-.adventure .adv h2 {
-  font-family: gilroyBold;
-  font-weight: 700;
-  font-size: 4.5rem;
-  margin-top: 0px;
 }
 @media screen and (max-width: 600px) {
   .adventure .adv h2.hide {
@@ -1555,12 +1547,16 @@ footer ul li a:hover {
   }
 }
 .embla__button::after {
-  border-radius: 20px !important;
+  border-radius: 30px !important;
   background-position: center, center;
 }
 .embla__button:hover {
   transform: none !important;
   box-shadow: none !important;
+}
+.embla__button:hover::after {
+  background: #1fc24d;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 420px) {
