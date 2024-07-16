@@ -3,7 +3,6 @@ footer {
   background: #ffffff0d;
   padding: 3vw 10vw;
   text-align: center;
-
   position: relative;
   overflow: hidden;
 
@@ -79,6 +78,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 50px auto;
+    margin-bottom: 0px;
     img {
       width: 30%;
       height: auto;
@@ -91,24 +91,22 @@ footer {
         width: 90%;
       }
     }
-    // width: 100px;
   }
   ul {
     margin-bottom: 3vw;
-
     padding: 0px;
-    @media screen and (max-width: 768px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      text-align: center;
-    }
-    @media screen and (max-width: 400px) {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-      text-align: center;
-    }
+    // @media screen and (max-width: 768px) {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr;
+    //   gap: 30px;
+    //   text-align: center;
+    // }
+    // @media screen and (max-width: 400px) {
+    //   display: grid;
+    //   grid-template-columns: 1fr;
+    //   gap: 30px;
+    //   text-align: center;
+    // }
     li {
       list-style-type: none;
       display: inline;
@@ -116,17 +114,15 @@ footer {
       font-weight: 500;
       font-family: gilroyBold;
 
-      @media screen and (max-width: 768px) {
-        display: block;
-        margin: 0px auto;
-        text-align: center;
-      }
-
       a {
         color: rgba(255, 255, 255, 0.466);
-        font-size: 1.5em;
+        font-size: 1rem;
         text-transform: uppercase;
         transition: 0.5s;
+
+        @media screen and (max-width: 400px) {
+          font-size: 0.75rem;
+        }
 
         &:hover {
           color: rgba(255, 255, 255, 0.89);

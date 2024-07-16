@@ -174,15 +174,19 @@
   border: none;
 
   &::after {
-    border-radius: 20px !important;
+    border-radius: 30px !important;
     background-position: center, center;
   }
 
   &:hover {
     transform: none !important;
     box-shadow: none !important;
-  }
 
+    &::after{
+      background: $green;
+      transition: .3s;
+    }
+  }
 }
 @media screen and (max-width: 420px) {
   .embla__button.brand {

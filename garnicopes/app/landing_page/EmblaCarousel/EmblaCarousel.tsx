@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import { AnimatePresence, motion } from "framer-motion";
@@ -19,7 +20,8 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  // const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [emblaRef,emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -37,13 +39,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container ">
           {slides.map((element, index) => (
             <motion.div
-              initial={{ scale: .5,opacity: 0 }}
+              initial={{ scale: .2,opacity: 0 }}
               whileInView={{
                 opacity: 1,
                 scale: 1,
                 transition: {
                   ease: "easeOut",
-                  duration: .5,
+                  duration: .2,
                 },
               }}
               className="embla__slide"
