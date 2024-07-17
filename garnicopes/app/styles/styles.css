@@ -66,7 +66,7 @@
 }
 .nav__logo {
   width: 200px !important;
-  height: auto !important;
+  height: 2rem !important;
 }
 @media screen and (max-width: 768px) {
   .nav .nav__resp {
@@ -922,7 +922,7 @@ footer ul li a:hover {
 }
 @media screen and (max-width: 400px) {
   .portfolio h2 {
-    width: 95%;
+    width: 100%;
   }
 }
 .portfolio h2 span {
